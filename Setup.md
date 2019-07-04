@@ -8,7 +8,9 @@ Table of Contents
 # Introduction #
 
 # Create Devices #
-It is essential that 
+It is essential that this step is down before proceeding to setting up the managers and motes on the Watson IoT Platform.
+
+
 # Set up a Manager #
 
 # Set up a Mote #
