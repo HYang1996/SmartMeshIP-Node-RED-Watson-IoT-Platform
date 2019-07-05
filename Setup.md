@@ -26,7 +26,7 @@ It shall also be noted that the guide assumes basic knowledge with both the Node
 ## Prerequisite ##
 Firstly, the following apps and services are required to be set up:
 
-![](images/ibm-cloud-apps.png)
+![](images/ibm-cloud-apps.png =1000x)
 
 Secondly, a connection has to be established between the __*Internet of Things Platform*__ service and the __*Node-RED Starter*__ app as shown below. This can be done in the __*Internet of Things Platform*__ service:
 
