@@ -113,7 +113,7 @@ It is __important__ that this page (or the API Key details generated) is saved t
 
 In order to establish connection to the Watson IoT Platform, the __IBM Watson IoT__ is required:
 
-![](images/watson-palette.png)
+<img src="images/watson-palette.png" width="300">
 
 ## Set up Watson IoT Node ##
 
