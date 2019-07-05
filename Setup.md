@@ -97,11 +97,11 @@ To fill in the properties, the [manager credentials obtained previously](#create
 
 Note that for the properties of the __wiotp-credentials node__, the corresponding information to be filled in is (characters in __[ ]__ represent information from the device credentials page):
 
-* __Organization__: [Organization ID] (*example*: f1bk1s)
-* __Server-Name__: [Organization ID].messaging.internetofthings.ibmcloud.com:8883 (*Port is optional*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
-* __Device Type__: [Device Type] (same as the device type created previously, *example*: manager)
-* __Device ID__: [Device ID] (*example*: 582857)
-* __Auth Token__: [Authentication Token] (*example*: h(AZQiR7yR8S2dKc_5)
+* __Organization__: __[Organization ID]__ (*example*: f1bk1s)
+* __Server-Name__: __[Organization ID].messaging.internetofthings.ibmcloud.com:8883__ (*Port is optional for added security*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
+* __Device Type__: __[Device Type]__ (same as the device type created previously, *example*: manager)
+* __Device ID__: __[Device ID]__ (*example*: 582857)
+* __Auth Token__: __[Authentication Token]__ (*example*: h(AZQiR7yR8S2dKc_5)
 
 After clicking the __Update__ button to confirm the changes, and then the __Done__ button, the Watson IoT node should be in the __connected__ state after deploying the flow:
 
