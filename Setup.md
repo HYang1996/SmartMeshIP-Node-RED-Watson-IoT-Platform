@@ -14,6 +14,12 @@ Table of Contents
 
 # Introduction #
 
+This setup guide aims to provide a comprehensive guidance to connecting the SmartMesh IP devices (both the managers and the motes) to the IBM Watson IoT Platform.
+
+The setup is part of the progress made during the summer project from Jun to Aug 2019 under the supervision of Dr. Ryan Grammenos at UCL. Due to the rapid upgrading and modificaitons done on the IBM services, this guide may become obsolete.
+
+It shall also be noted that the guide assumes basic knowledge with both the Node-RED and the IBM cloud services, and the focus of the guide is to enhance the convenience and ease while setting up the devices.
+
 # Watson IoT Platform #
 
 ## Prerequisite ##
@@ -133,3 +139,9 @@ After clicking the __Update__ button to confirm the changes, and then the __Done
 The manager device in the __Watson IoT Platform__ should be in the __connected__ state as well:
 
 ![](images/watson-iot-connected.png)
+
+# Node-Red on Watson IoT Platform #
+
+## Set up IBM IoT Node ##
+
+Once any of the IBM IoT node in the flow is opened, a page as such is shown:
