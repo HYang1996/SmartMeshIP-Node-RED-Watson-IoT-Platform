@@ -79,6 +79,12 @@ It is __important__ that this page (or the credentials on the page) is saved to 
 
 Motes will be automatically created by the manager gateways once the managers establish connections with them. Therefore, a mote device does not have to be created manually here.
 
+An example is shown below:
+
+![](images/watson-mote-connected.png)
+
+It should be noted that although the motes are indeed created as devices, their __Status__ would remain as __Disconnected__. One way to check if a mote is connected is going to the mote's __Event__ tab and monitor if there are any latest events showing up.
+
 ## Generate API Key ##
 
 The API key used to access the Watson IoT Platform can be generated under the __App__ tab:
