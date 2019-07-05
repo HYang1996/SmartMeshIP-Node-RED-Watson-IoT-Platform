@@ -4,8 +4,8 @@ Table of Contents
 1. [Watson IoT Platform](#watson-iot-platform)
     * [Prerequisite](#prerequisite)
     * [Create Devices](#create-devices)
-    * [Set up a Manager](#set-up-a-manager)
-    * [Set up a Mote](#set-up-a-mote)
+    * [Set up a Manager](#create-a-manager-device)
+    * [Set up a Mote](#create-a-mote-device)
 1. [Node-Red on Local Devices](#node-red-on-local-devices)
 1. [Node-Red on Watson IoT Platform](#node-red-on-watson-iot-platform)
 
@@ -45,6 +45,6 @@ After the device types have been created, individual devices can then be created
 
 ![](images/create-device.png)
 
-## Set up a Manager ##
+## Create a Manager Device ##
 
-## Set up a Mote ##
+## Create a Mote Device ##
