@@ -11,6 +11,7 @@ Table of Contents
     * [Palette Required](#palette-required)
     * [Set up Watson IoT Node](#set-up-watson-iot-node)
 1. [Node-Red on Watson IoT Platform](#node-red-on-watson-iot-platform)
+    * [Set up IBM IoT Node](#set-up-ibm-iot-node)
 
 # Introduction #
 
@@ -165,6 +166,6 @@ Note that for the properties of the __ibmiot node__, the corresponding informati
 * __API Token__: __[Authentication Token]__ (*example*: nEj(AAFOdRT(8CgmH))
 * __Server-Name__: __[Organization ID].messaging.internetofthings.ibmcloud.com:8883__ (*Port is optional for added security, but shall match [the one set up on the local Node-RED flows](#set-up-watson-iot-node)*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
 
-After clicking the __Update__ button and the __Done__ button, the __ibmiot__ node should show as connected once the flow is deplyed:
+After clicking the __Update__ button and the __Done__ button, the __ibmiot__ node should show as connected once the flow is deployed:
 
 ![](images/ibmiot-connected.png)
