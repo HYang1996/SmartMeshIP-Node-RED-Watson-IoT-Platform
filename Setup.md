@@ -3,9 +3,9 @@ Table of Contents
 1. [Introduction](#introduction)
 1. [Watson IoT Platform](#watson-iot-platform)
     * [Prerequisite](#prerequisite)
-    * [Create Devices](#create-devices)
-    * [Set up a Manager](#create-a-manager-device)
-    * [Set up a Mote](#create-a-mote-device)
+    * [Create Device Types](#create-device-types)
+    * [Create a Manager Device](#create-a-manager-device)
+    * [Create a Mote Device](#create-a-mote-device)
 1. [Node-Red on Local Devices](#node-red-on-local-devices)
 1. [Node-Red on Watson IoT Platform](#node-red-on-watson-iot-platform)
 
