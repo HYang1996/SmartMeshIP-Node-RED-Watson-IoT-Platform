@@ -7,7 +7,8 @@ Table of Contents
     * [Create a Manager Device](#create-a-manager-device)
     * [Create a Mote Device](#create-a-mote-device)
 1. [Node-Red on Local Devices](#node-red-on-local-devices)
-    * [Pallets Required](#palletes required)
+    * [Palette Required](#palette-required)
+    * [Set up Watson IoT Node](#set-up-watson-iot-node)
 1. [Node-Red on Watson IoT Platform](#node-red-on-watson-iot-platform)
 
 # Introduction #
@@ -69,3 +70,37 @@ It is __important__ that this page (or the credentials on the page) is saved to 
 ## Create a Mote Device ##
 
 Motes will be automatically created by the manager gateways once the managers establish connections with them. Therefore, a mote device does not have to be created manually here.
+
+# Node-RED on Local Devices #
+
+## Palette Required ##
+
+In order to establish connection to the Watson IoT Platform, the __IBM Watson IoT__ is required:
+
+![](images/watson-palette.png)
+
+## Set up Watson IoT Node ##
+
+Once any of the Watson IoT Node in the flow is opened, a pages as such is shown:
+
+![](images/watson-node.png)
+
+The node shall be selected to connect as __Gateway__ as shown.
+
+Once clicking on the edit button on the __Credentials__ tab, a new page is brought up and the device credentials can be filled in:
+
+![](images/watson-node-credential.png)
+
+To fill in the properties, the [manager credentials obtained previously](#create-a-manager-device) shall be used:
+
+![](images/manager-credential.png)
+
+Note that for the properties of the __wiotp-credentials node__, the corresponding information to be filled in is (characters in __[ ]__ represent information from the device credentials page):
+
+* __Organization__: [Organization ID] (*example*: f1bk1s)
+* __Server-Name__: [Organization ID].messaging.internetofthings.ibmcloud.com:8883 (*Port is optional*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
+* __Device Type__: [Device Type] (same as the device type created previously, *example*: manager)
+* __Device ID__: [Device ID] (*example*: 582857)
+* __Auth Token__: [Authentication Token] (*example*: h(AZQiR7yR8S2dKc_5)
+
+After clicking the __Update__ button to confirm the changes, and then the __Done__ button, the Watson IoT node should be in the __connected__ state after deploying the flow:
