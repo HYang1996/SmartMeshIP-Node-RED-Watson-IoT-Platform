@@ -6,6 +6,7 @@ Table of Contents
     * [Create Device Types](#create-device-types)
     * [Create a Manager Device](#create-a-manager-device)
     * [Create a Mote Device](#create-a-mote-device)
+    * [Generate API Key](#generate-api-key)
 1. [Node-Red on Local Devices](#node-red-on-local-devices)
     * [Palette Required](#palette-required)
     * [Set up Watson IoT Node](#set-up-watson-iot-node)
@@ -70,6 +71,10 @@ It is __important__ that this page (or the credentials on the page) is saved to 
 ## Create a Mote Device ##
 
 Motes will be automatically created by the manager gateways once the managers establish connections with them. Therefore, a mote device does not have to be created manually here.
+
+## Generate API Key ##
+
+
 
 # Node-RED on Local Devices #
 
