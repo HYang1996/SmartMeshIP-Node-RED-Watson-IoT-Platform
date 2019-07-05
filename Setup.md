@@ -24,10 +24,26 @@ Secondly, a connection has to be established between the __*Internet of Things P
 
 Note that connecting to the app would involve restaging it. However, it has been noticed that further connections established between other services and the __*Node-RED Starter*__ app would result in the mulfunctioning of the Node-RED flows.
 
-## Create Devices ##
-It is essential that this step is down before proceeding to setting up the managers and motes on the Watson IoT Platform.
+## Create Device Types ##
+It is essential that this step is done before proceeding to setting up the managers and motes on the Watson IoT Platform.
 
-Once
+After launching the __*Internet of Things Platform*__, device types can be created under the __*Device Types*__ tab:
+
+![](images/create-device-type.png)
+
+By clicking on the __*Add Device Type*__ button, devices can be added.
+
+A manager type can be created by selecting the device __Type__ as __Gateway__:
+
+![](images/create-manager.png)
+
+A mote type can be created by selecting the device __Type__ as __Device__:
+
+![](images/create-mote.png)
+
+After the device types have been created, individual devices can then be created:
+
+![](images/create-device.png)
 
 ## Set up a Manager ##
 
