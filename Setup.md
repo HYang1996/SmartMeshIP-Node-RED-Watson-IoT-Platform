@@ -104,3 +104,9 @@ Note that for the properties of the __wiotp-credentials node__, the correspondin
 * __Auth Token__: [Authentication Token] (*example*: h(AZQiR7yR8S2dKc_5)
 
 After clicking the __Update__ button to confirm the changes, and then the __Done__ button, the Watson IoT node should be in the __connected__ state after deploying the flow:
+
+![](images/watson-connected.png)
+
+The manager device in the __Watson IoT Platform__ should be in the __connected__ state as well:
+
+![](images/watson-iot-connected.png)
