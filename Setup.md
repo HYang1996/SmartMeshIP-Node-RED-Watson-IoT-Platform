@@ -145,3 +145,26 @@ The manager device in the __Watson IoT Platform__ should be in the __connected__
 ## Set up IBM IoT Node ##
 
 Once any of the IBM IoT node in the flow is opened, a page as such is shown:
+
+![](images/ibmiot-node.png)
+
+The __Authentication__ tab should be selected as __API Key__.
+
+By clicking on the edit button on the __API Key__ tab, a page can be brought up and the details can be filled in:
+
+![](images/ibmiot-api.png)
+
+To fill in the properties, the [API Key details obtained previously](#generate-api-key) shall be used:
+
+![](images/watson-api-token.png)
+
+Note that for the properties of the __ibmiot node__, the corresponding information to be filled in is (characters in __[ ]__ represent information from the device credentials and the API Key page):
+
+* __Name__: __Watson_API__ (*can be customised*)
+* __API Key__: __[API Key]__ (*example*: a-f1bk1s-agrwrczy7c)
+* __API Token__: __[Authentication Token]__ (*example*: nEj(AAFOdRT(8CgmH))
+* __Server-Name__: __[Organization ID].messaging.internetofthings.ibmcloud.com:8883__ (*Port is optional for added security, but shall match [the one set up on the local Node-RED flows](#set-up-watson-iot-node)*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
+
+After clicking the __Update__ button and the __Done__ button, the __ibmiot__ node should show as connected once the flow is deplyed:
+
+![](images/ibmiot-connected.png)
