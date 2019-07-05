@@ -7,6 +7,7 @@ Table of Contents
     * [Create a Manager Device](#create-a-manager-device)
     * [Create a Mote Device](#create-a-mote-device)
 1. [Node-Red on Local Devices](#node-red-on-local-devices)
+    * [Pallets Required](#palletes required)
 1. [Node-Red on Watson IoT Platform](#node-red-on-watson-iot-platform)
 
 # Introduction #
@@ -47,4 +48,24 @@ After the device types have been created, individual devices can then be created
 
 ## Create a Manager Device ##
 
+A manager can be created by clicking on the __Create a device__ (will not show up once the first device is created) or the __Add Device__ button, bringing up the page:
+
+![](images/manager-id.png)
+
+The __Device Type__ is selected as __manager___, which has been created as a gateway device type.
+
+There is no fixed format for __Device ID__.
+
+Once reaching the __Security__ step, an __Authentication Token__ is required. This can be left blank for it to be generated automatically:
+
+![](images/manager-token.png)
+
+After finishing all the steps, a new page of the device credentials would be brought up:
+
+![](images/manager-credential.png)
+
+It is __important__ that this page (or the credentials on the page) is saved to be referred to later on since the credentials will not be accessible once leaving this page.
+
 ## Create a Mote Device ##
+
+Motes will be automatically created by the manager gateways once the managers establish connections with them. Therefore, a mote device does not have to be created manually here.
