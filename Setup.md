@@ -22,6 +22,8 @@ Secondly, a connection has to be established between the __*Internet of Things P
 
 ![](images/watson-iot-connections.png)
 
+Note that connecting to the app would involve restaging it. However, it has been noticed that further connections established between other services and the __*Node-RED Starter*__ app would result in the mulfunctioning of the Node-RED flows.
+
 ## Create Devices ##
 It is essential that this step is down before proceeding to setting up the managers and motes on the Watson IoT Platform.
 
