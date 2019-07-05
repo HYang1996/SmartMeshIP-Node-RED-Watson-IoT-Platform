@@ -125,7 +125,7 @@ The node shall be selected to connect as __Gateway__ as shown.
 
 Once clicking on the edit button on the __Credentials__ tab, a new page is brought up and the device credentials can be filled in:
 
-![](images/watson-node-credential.png)
+<img src="images/watson-node-credential.png" width="600">
 
 To fill in the properties, the [manager credentials obtained previously](#create-a-manager-device) shall be used:
 
@@ -141,7 +141,7 @@ Note that for the properties of the __wiotp-credentials node__, the correspondin
 
 After clicking the __Update__ button to confirm the changes, and then the __Done__ button, the Watson IoT node should be in the __connected__ state after deploying the flow:
 
-![](images/watson-connected.png)
+<img src="images/watson-connected.png" width="200">
 
 The manager device in the __Watson IoT Platform__ should be in the __connected__ state as well:
 
@@ -153,13 +153,13 @@ The manager device in the __Watson IoT Platform__ should be in the __connected__
 
 Once any of the IBM IoT node in the flow is opened, a page as such is shown:
 
-![](images/ibmiot-node.png)
+<img src="images/ibmiot-node.png" width="600">
 
 The __Authentication__ tab should be selected as __API Key__.
 
 By clicking on the edit button on the __API Key__ tab, a page can be brought up and the details can be filled in:
 
-![](images/ibmiot-api.png)
+<img src="images/ibmiot-api.png" width="600">
 
 To fill in the properties, the [API Key details obtained previously](#generate-api-key) shall be used:
 
@@ -174,4 +174,4 @@ Note that for the properties of the __ibmiot node__, the corresponding informati
 
 After clicking the __Update__ button and the __Done__ button, the __ibmiot__ node should show as connected once the flow is deployed:
 
-![](images/ibmiot-connected.png)
+<img src="images/ibmiot-connected.png" width="200">
