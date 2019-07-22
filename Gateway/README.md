@@ -47,3 +47,7 @@ In the __Authetication__ tab, __API Key__ should be chosen. The API key can be c
 After the information is correctly entered and the Update button is clicked, one of the device types created on the Watson IoT Platform (in this case, 'mote') will be automatically shown in the Device Type tab, and a blank tab would indicate either incorrect API Key information or no device type created on the Watson IoT Platform:
 
 <img src="images/device-manager-configed.png" width="600">
+
+# Auto-backup #
+
+This function is created in the event when the flow is accidentally lost on the hosting device.
