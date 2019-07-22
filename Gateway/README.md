@@ -3,6 +3,7 @@ Table of Contents
 1. [Introduction](#introduction)
 1. [Gateway](#gateway)
     * [Connect to Watson IoT Paltform](#connect-to-watson-iot-platform)
+    * [Connect to Device Manager](#connect-to-device-manager)
 1. [Auto-backup](#auto-backup)
 
 # Introduction #
@@ -17,6 +18,19 @@ The flow is created and improved based on the [resources available](https://gith
 
 The first configuration required to be done mannually in the flow is connecting to the device created on the Watson IoT Platform. The nodes that have to be configured are indicated in the screeshot shown below:
 
-![](images/gatewat-connect.png)
+![](images/gateway-connect.png)
 
 The proper way to configure these nodes are documented in the [basic setup guide](../Basic-Setup-Guide/README.md), under the __Set up Watson IoT Node__ section.
+
+## Connect to Device Manager ##
+
+Another configuration required to be done mannually is the device manager nodes that are reponsible for deleting the devices on the Watson IoT Platform once they are disconnected from the gateways:
+
+![](images/gateway-device-manager.png)
+
+In order to use the nodes, the [corresponding palette](https://flows.nodered.org/node/node-red-contrib-ibm-wiotp-device-ops) has to be installed:
+
+or install with npm:
+```
+npm install node-red-contrib-ibm-wiotp-device-ops
+```
