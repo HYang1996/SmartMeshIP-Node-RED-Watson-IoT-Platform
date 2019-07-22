@@ -19,4 +19,4 @@ The first configuration required to be done mannually in the flow is connecting 
 
 ![](images/gatewat-connect.png)
 
-The proper way to configure these nodes are documented in the [basic setup guide](../basic-setup-guide/README.md), under the __Set up Watson IoT Node__ section.
+The proper way to configure these nodes are documented in the [basic setup guide](../Basic-Setup-Guide/README.md), under the __Set up Watson IoT Node__ section.
