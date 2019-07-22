@@ -30,7 +30,7 @@ Another configuration required to be done mannually is the device manager nodes 
 
 In order to use the nodes, the [corresponding palette](https://flows.nodered.org/node/node-red-contrib-ibm-wiotp-device-ops) has to be installed:
 
-<img src="images/device-manager-palette.png" width="300">
+<img src="images/device-manager-palette.png" width="600">
 
 or install with npm:
 ```
@@ -38,12 +38,12 @@ npm install node-red-contrib-ibm-wiotp-device-ops
 ```
 Once the palette is installed, the nodes can be configured.
 
-<img src="images/device-manager-config.png" width="300">
+<img src="images/device-manager-config.png" width="600">
 
 In the __Authetication__ tab, __API Key__ should be chosen. The API key can be configured in the __API Key__ tab. The API key used here refers to the API key of the Watson IoT Platform, which has been generated (details can be found in the [basic setup guide](../Basic-Setup-Guide/README.md), under the section Generate API Key):
 
-<img src="images/device-manager-API.png" width="300">
+<img src="images/device-manager-API.png" width="600">
 
 After the information is correctly entered and the Update button is clicked, one of the device type created on the Watson IoT Platform (in this case, 'mote') will be automatically shown in the Device Type tab, and a blank tab would indicate either incorrect API Key information or no device type created on the Watson IoT Platform:
 
-<img src="images/device-manager-configed.png" width="300">
+<img src="images/device-manager-configed.png" width="600">
