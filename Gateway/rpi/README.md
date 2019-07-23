@@ -4,6 +4,8 @@ Table of Contents
     * [Connect to Eduroam](#connect-to-eduroam)
     * [Update to Jessie](#update-to-jessie)
     * [Install Node-RED](#install-node-red)
+1. [Configure Node-RED Flows](#configure-node-red-flows)
+    * [Connect to Watson IoT Platform and Device Manager](#connect-to-watson-iot-platform-and-device-manager)
 
 # Raspberry Pi Setup #
 
@@ -29,4 +31,14 @@ Once the system is set up, Nore-RED can be installed with the code:
 bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
 ```
 
-If the Pi fails to install Node.js, it can be manually installed before installing Node-RED, and a useful and tested resource can be found [here](https://learn.adafruit.com/node-embedded-development/installing-node-dot-js)
+If the Pi fails to install Node.js, it can be manually installed before installing Node-RED, and a useful and tested resource can be found [here](https://learn.adafruit.com/node-embedded-development/installing-node-dot-js).
+
+# Configure Node-RED Flows #
+
+The flows used on the Pi are identical to that used on other devices, with some slight modifications in configurations.
+
+The flows can be found in the [rpi-flows.json](rpi-flows.json) file.
+
+## Connect to Watson IoT Platform and Device Manager ##
+
+To connect the flows to the Watson IoT Platform, as well as to configure the Device Manager nodes in the flow, the same procedures introduced in the [Gateway](../README.md) section is used.
