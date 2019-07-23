@@ -6,7 +6,7 @@ Table of Contents
     * [Connect to Device Manager](#connect-to-device-manager)
 1. [Auto-backup](#auto-backup)
 1. [Raspberry Pi Hosting the Manager](#raspberry-pi-hosting-the-manager)
-    * [Connect to eduroam](#connect-to-eduroam)
+    * [Connect to Eduroam](#connect-to-eduroam)
 
 # Introduction #
 
@@ -62,4 +62,4 @@ In this project, the Raspberry Pi 2 is used to host the SmartMesh Network manage
 
 Firstly, the Raspberry Pi has to be connected to the eduroam network via Wifi.
 
-The script and instructions used to do so can be found under the folder [rpi/eduroam-confif](rpi/eduroam-config). 
+The script and instructions used to do so can be found under the folder [rpi/eduroam-config](rpi/eduroam-config).
