@@ -59,7 +59,7 @@ To access the device as an unprivileged user, permissions have to be fixed on bo
 sudo chmod 666 /dev/ttyUSB[23]
 ```
 
-A detailed explanation on this can be found in the __[SmartMesh IP Tools Guide](https://www.analog.com/media/en/technical-documentation/user-guides/smartmesh_ip_tools_guide.pdf)__, under the section __3.2.2 Linux FTDI Driver installation__
+A detailed explanation on this can be found in the __[SmartMesh IP Tools Guide](https://www.analog.com/media/en/technical-documentation/user-guides/smartmesh_ip_tools_guide.pdf)__, under the section __3.2.2 Linux FTDI Driver installation__.
 
 ## Install JsonServer Application ##
 
@@ -107,6 +107,55 @@ To connect the manager in the application, the following commnad can be used (wh
 cm /dev/ttyUSB3
 ```
 
+Note that a JsonServer.config file will be automatically generated in the folder when the manager is created, which is the reason why the application is run after making the working directory to the applicaiton folder. If the application is run directly with a home directory, the .config file will be generated there.
+
+Although the generated JsonServer.config file is supposed to record the manager information and allow the manager to be automatically connected without any manual input, it failed to do so during this project. A fix to this issue is presented below:
+
+Open the JsonServer.py file and go to the end of the file, where a section as the one shown below can be found:
+
+```
+#============================ main ============================================
+
+def main(args):
+    jsonServer = JsonServer(**args)
+
+if __name__=="__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--tcpport',        default=8080)
+    parser.add_argument('--autoaddmgr',     default=True)
+    parser.add_argument('--autodeletemgr',  default=True)
+    parser.add_argument('--serialport',     default=None)
+    parser.add_argument('--configfilename', default='JsonServer.config')
+    args = vars(parser.parse_args())
+    main(args)
+```
+
+It can be seen that the default state of the __--autodeletemgr__ argument is __True__. This can be manually to __False__, and the resulting section of the code should look like:
+
+```
+#============================ main ============================================
+
+def main(args):
+    jsonServer = JsonServer(**args)
+
+if __name__=="__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--tcpport',        default=8080)
+    parser.add_argument('--autoaddmgr',     default=True)
+    parser.add_argument('--autodeletemgr',  default=False)
+    parser.add_argument('--serialport',     default=None)
+    parser.add_argument('--configfilename', default='JsonServer.config')
+    args = vars(parser.parse_args())
+    main(args)
+```
+
+As such, once the manager /dev/ttyUSB3 is connected to the application, it will remain the manager when the application is re-launched, and its status will be shown as either __connected__ or __disconnected__.
+
+To disconnect the manager in order change to another one, the command can be used:
+
+```
+dm /dev/ttyUSB3
+```
 
 
 # Configure Node-RED Flows #
