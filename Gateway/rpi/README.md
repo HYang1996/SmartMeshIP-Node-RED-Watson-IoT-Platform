@@ -213,3 +213,5 @@ Two commands to run JsonServer.sh and Node-RED flows can be added before the las
 Save and exit the file by:
 
 <kbd>Ctrl</kbd> + <kbd>X</kbd> , <kbd>Y</kbd>, <kbd>Enter<kbd>
+
+Reboot the Pi and the two terminal sessions should be running.
