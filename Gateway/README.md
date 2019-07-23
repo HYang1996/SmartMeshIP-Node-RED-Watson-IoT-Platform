@@ -5,6 +5,8 @@ Table of Contents
     * [Connect to Watson IoT Paltform](#connect-to-watson-iot-platform)
     * [Connect to Device Manager](#connect-to-device-manager)
 1. [Auto-backup](#auto-backup)
+1. [Raspberry Pi Hosting the Manager](#raspberry-pi-hosting-the-manager)
+    * [Connect to eduroam](#connect-to-eduroam)
 
 # Introduction #
 
@@ -51,3 +53,13 @@ After the information is correctly entered and the Update button is clicked, one
 # Auto-backup #
 
 This function is created in the event when the flow is accidentally lost on the hosting device.
+
+# Raspberry Pi Hosting the Manager #
+
+In this project, the Raspberry Pi 2 is used to host the SmartMesh Network manager.
+
+## Connect to Eduroam ##
+
+Firstly, the Raspberry Pi has to be connected to the eduroam network via Wifi.
+
+The script and instructions used to do so can be found under the folder [rpi/eduroam-confif](rpi/eduroam-config). 
