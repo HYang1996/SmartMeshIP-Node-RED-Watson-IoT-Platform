@@ -1,0 +1,108 @@
+#!/usr/bin/perl
+#
+# Perl script to configure the correct config file for connecting a Raspberry Pi 3 to UCL's Eduroam
+# This has only been tested on:
+#  Raspberry Pi 3
+#  Raspbian 8 (jessie)
+# v1.0 LH, 23/02/17
+####################################################################################################
+my $tmp         = "/tmp";
+my $wpa_dir     = "/etc/wpa_supplicant";
+my $wpa_file    = "$wpa_dir/wpa_supplicant.conf";
+my $ssid        = "eduroam";
+my $proto       = "RSN";
+my $key_mgmt    = "WPA-EAP";
+my $pairwise    = "CCMP";
+my $auth_alg    = "OPEN";
+my $eap         = "PEAP";
+my $phase1      = "\"peaplabel=0\"";
+my $phase2      = "\"auth=MSCHAPV2\"";
+my $priority    = 1;
+my $id          = "";
+my $passwd      = "";
+my $passwd_hash = "";
+
+##############################
+# Get UCL userid from end user
+##############################
+print "Configuring Eduroam....\n";
+print "\nThis script needs to be ran as ROOT, or with 'sudo'\n";
+print "i.e. sudo $0\n\n";
+print "Please enter your UCL userid: ";
+chomp($id = <STDIN>);
+##################################################################
+# Check to see if we have a userid and it is in the correct format
+##################################################################
+if ($id eq "") {
+  Error("You must enter your UCL userid");
+} elsif ($id !~ /\@ucl/) {
+  $id .= "\@ucl.ac.uk";
+}
+################################
+# Get UCL password from end user
+################################
+print "Please enter your UCL password: ";
+system("stty -echo");
+chomp($passwd = <STDIN>);
+system("stty echo");
+print "\nPlease enter your UCL password again: ";
+system("stty -echo");
+chomp($passwd_again = <STDIN>);
+system("stty echo");
+
+#############################################
+# Check to see if the entered passwords match
+#############################################
+if ($passwd eq $passwd_again) {
+  if ($passwd eq "") {
+    Error("You must enter your UCL password");
+  } else {
+    chomp(my $passwd_hash_full = `echo -n "$passwd" | iconv -t utf16le | openssl md4`);
+    $passwd_hash = (split(/ /,$passwd_hash_full))[1];
+  }
+  #############################
+  # Open WPA file to write data
+  #############################
+  open(FILE,"> $wpa_file") or die "\n\nERROR: Unable to open WPA file for writing: $!\nMake sure you run this script as ROOT or with sudo\n\n i.e sudo $0\n";
+  print FILE "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\n";
+  print FILE "update_config=1\n";
+  print FILE "country=GB\n\n";
+  print FILE "network={\n";
+  print FILE "\tssid=\"$ssid\"\n";
+  print FILE "\tproto=$proto\n";
+  print FILE "\tkey_mgmt=$key_mgmt\n";
+  print FILE "\tpairwise=$pairwise\n"; 
+  print FILE "\tauth_alg=$auth_alg\n";
+  print FILE "\teap=$eap\n";
+  print FILE "\tidentity=\"$id\"\n";
+  print FILE "\tpassword=hash:$passwd_hash\n";
+  print FILE "\tphase1=$phase1\n";
+  print FILE "\tphase2=$phase2\n";
+  print FILE "\tpriority=$priority\n";
+  print FILE "}\n";
+  close(FILE);
+  #print "\nYour UCL userid is: $id\n";
+  #print "Your UCL password is: $passwd\n";
+  print "\n\nConfiguration has been written to $wpa_file\n\n";
+  CleanUp();
+} else {
+  Error("Passwords do not match");
+}
+
+###############
+# Display Error
+###############
+sub Error {
+ my $_error = shift;
+ print "\n\nERROR: $_error\n\n";
+ CleanUp();
+ exit 1;
+}
+
+#############################################################
+# Cleanup up history to remove any traces of the UCL Password
+#############################################################
+sub CleanUp {
+ system("history -w");
+ system("history -c");
+}
