@@ -130,7 +130,7 @@ if __name__=="__main__":
     main(args)
 ```
 
-It can be seen that the default state of the __--autodeletemgr__ argument is __True__. This can be manually to __False__, and the resulting section of the code should look like:
+It can be seen that the default state of the __--autodeletemgr__ argument is __True__. This can be manually changed to __False__, and the resulting section of the code should look like:
 
 ```
 #============================ main ============================================
