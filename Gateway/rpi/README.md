@@ -5,7 +5,7 @@ Table of Contents
     * [Update to Jessie](#update-to-jessie)
     * [Install Node-RED](#install-node-red)
     * [FTDI Driver Configuration](#ftdi-driver-configuration)
-    * [Install JsonServer Application](#install-jsonserver-appication)
+    * [Install JsonServer Application](#install-jsonserver-application)
 1. [Configure Node-RED Flows](#configure-node-red-flows)
     * [Connect to Watson IoT Platform and Device Manager](#connect-to-watson-iot-platform-and-device-manager)
     * [Auto-backup](#auto-backup)
@@ -190,10 +190,10 @@ Firstly, a [JsonServer.sh](JsonServer.sh) bash script is created under the /home
 
 ```
 
- It is important to ensure the file is executable, which can be archiveed with:
+ It is important to ensure the file is executable, which can be achieved with:
 
 ```
 sudo chmod 777 /home/pi/JsonServer.sh
 ```
 
-Next, lxterminal sessions after login can be created. 
+Next, lxterminal sessions after login can be created.
