@@ -10,6 +10,7 @@ Table of Contents
     * [Connect to Watson IoT Platform and Device Manager](#connect-to-watson-iot-platform-and-device-manager)
     * [Auto-backup](#auto-backup)
     * [Errors in Nodes](#errors-in-nodes)
+1. [Run Services on Boot](#run-services-on-boot)
 
 # Raspberry Pi Setup #
 
@@ -36,6 +37,8 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/
 ```
 
 If the Pi fails to install Node.js, it can be manually installed before installing Node-RED, and a useful and tested resource can be found [here](https://learn.adafruit.com/node-embedded-development/installing-node-dot-js).
+
+Minor errors may occur during the installation process. They should be fixed by re-running the installation.
 
 ## FTDI Driver Configuration ##
 
@@ -157,7 +160,6 @@ To disconnect the manager in order change to another one, the command can be use
 dm /dev/ttyUSB3
 ```
 
-
 # Configure Node-RED Flows #
 
 The flows used on the Pi are identical to that used on other devices, with some slight modifications in configurations.
@@ -175,3 +177,23 @@ The directories under the auto-backup flow should be changed for the Pi to funct
 ## Errors in Nodes ##
 
 Errors and notifications of displayed on the Pi's Node-RED nodes, such as the ones shonw below, can be ignored and the flows cna be deployed, as long as the flows are tested to be running properly on other devices.
+
+# Run Services on Boot #
+
+The Pi can be configured to run both the JsonServer application and the Node-RED flows automatically without any user input after booted up.
+
+There are several approaches to do so, and the one used in the project is to start the services after login and showing them in separate terminal screens.
+
+Firstly, a [JsonServer.sh](JsonServer.sh) bash script is created under the /home/pi/ directory, with the content shown below:
+
+```
+
+```
+
+ It is important to ensure the file is executable, which can be archiveed with:
+
+```
+sudo chmod 777 /home/pi/JsonServer.sh
+```
+
+Next, lxterminal sessions after login can be created. 
