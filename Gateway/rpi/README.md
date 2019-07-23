@@ -197,3 +197,19 @@ sudo chmod 777 /home/pi/JsonServer.sh
 ```
 
 Next, lxterminal sessions after login can be created.
+
+Navigate and open the file:
+
+```
+sudo nano ~/.config/lxsession/LXDE-pi/autostart
+```
+
+Two commands to run JsonServer.sh and Node-RED flows can be added before the last line (adding commands at the end may result in them not running), and the resutant file should look like:
+
+```
+
+```
+
+Save and exit the file by:
+
+<kbd>Ctrl</kbd> + <kbd>X</kbd> , <kbd>Y</kbd>, <kbd>Enter<kbd>
