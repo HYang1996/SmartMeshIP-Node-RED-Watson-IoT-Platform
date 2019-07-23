@@ -16,7 +16,7 @@ The flow is created and improved based on the [resources available](https://gith
 
 ## Connect to Watson IoT Platform ##
 
-The first configuration required to be done mannually in the flow is connecting to the device created on the Watson IoT Platform. The nodes that have to be configured are indicated in the screeshot shown below:
+The first configuration required to be done manually in the flow is connecting to the device created on the Watson IoT Platform. The nodes that have to be configured are indicated in the screeshot shown below:
 
 ![](images/gateway-connect.png)
 
@@ -24,7 +24,7 @@ The proper way to configure these nodes are documented in the [basic setup guide
 
 ## Connect to Device Manager ##
 
-Another configuration required to be done mannually is the device manager nodes that are reponsible for deleting the devices on the Watson IoT Platform once they are disconnected from the gateways:
+Another configuration required to be done manually is the device manager nodes that are reponsible for deleting the devices on the Watson IoT Platform once they are disconnected from the gateways:
 
 ![](images/gateway-device-manager.png)
 
