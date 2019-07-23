@@ -198,7 +198,7 @@ sudo chmod 777 /home/pi/JsonServer.sh
 
 Next, lxterminal sessions after login can be created.
 
-Navigate and open the file:
+Navigate and open the LXDE autostart file:
 
 ```
 sudo nano ~/.config/lxsession/LXDE-pi/autostart
