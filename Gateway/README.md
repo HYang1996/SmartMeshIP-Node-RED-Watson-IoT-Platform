@@ -12,6 +12,8 @@ This section details the Node-RED flow used for the gatways (managers) in a Smar
 
 The flow is created and improved based on the [resources available](https://github.com/twatteyne/smartmesh-bluemix/tree/master/01-gateway). The following documentation provides detailed explanations to the nodes implemented in the flow.
 
+To implement the flows on a Raspberry Pi device, a detailed documentation can be found in the folder [rpi](rpi).
+
 # Gateway #
 
 ## Connect to Watson IoT Platform ##
