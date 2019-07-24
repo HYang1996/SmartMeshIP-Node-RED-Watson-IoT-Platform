@@ -182,7 +182,7 @@ Similar to the setup on other devices, the first node should be connected to the
 
 <img src="images/node-red-flow.png" width="400">
 
-The backup files can be saved to the libarary folder:
+The backup files can be saved to the library folder:
 
 ```
 ~/.node-red/lib/flows
