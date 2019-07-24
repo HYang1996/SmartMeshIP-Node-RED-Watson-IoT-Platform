@@ -184,11 +184,27 @@ The Pi can be configured to run both the JsonServer application and the Node-RED
 
 There are several approaches to do so, and the one used in the project is to start the services after login and showing them in separate terminal screens.
 
-Firstly, a [JsonServer.sh](JsonServer.sh) bash script is created under the /home/pi/ directory, with the content shown below:
+Firstly, a [JsonServer.sh](JsonServer.sh) bash script is created under the /home/pi/ directory:
 
 ```
+sudo nano /home/pi/JsonServer.sh
+```
+
+Add in the following content:
 
 ```
+#! /bin/bash
+
+cd /home/pi/smartmeshsdk-master/app/JsonServer
+python JsonServer/.py
+```
+
+Save and exit the file with:
+
+```
+<kbd>Ctrl</kbd> + <kbd>X</kbd> , <kbd>Y</kbd>, <kbd>Enter<kbd>
+```
+
 
  It is important to ensure the file is executable, which can be achieved with:
 
@@ -210,7 +226,7 @@ Two commands to run JsonServer.sh and Node-RED flows can be added before the las
 
 ```
 
-Save and exit the file by:
+Save and exit the file with:
 
 <kbd>Ctrl</kbd> + <kbd>X</kbd> , <kbd>Y</kbd>, <kbd>Enter<kbd>
 
