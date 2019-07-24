@@ -30,7 +30,7 @@ A useful and tested tutorial to do so can be found in this [link](https://www.ho
 
 ## Install Node-RED ##
 
-Once the system is set up, Nore-RED can be installed with the code:
+Once the system is set up, Nore-RED can be [installed](https://nodered.org/docs/getting-started/raspberrypi) with the code:
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
@@ -52,7 +52,7 @@ dmesg | grep FTDI
 
 A sample of the result can be seen below:
 
-![](images/FTDI)
+<img src="images/FTDI.png" width="600">
 
 A common serial port used to communicate with the device's API is __/dev/ttyUSB3__, which is the one in this case.
 
@@ -164,7 +164,7 @@ dm /dev/ttyUSB3
 
 The flows used on the Pi are identical to that used on other devices, with some slight modifications in configurations.
 
-The flows can be found in the [rpi-flows.json](rpi-flows.json) file.
+The flows can be found in the [flows_raspberrypi.json](flows_raspberrypi.json) file.
 
 ## Connect to Watson IoT Platform and Device Manager ##
 
@@ -173,6 +173,22 @@ To connect the flows to the Watson IoT Platform, as well as to configure the Dev
 ## Auto-backup ##
 
 The directories under the auto-backup flow should be changed for the Pi to function properly.
+
+Similar to the setup on other devices, the first node should be connected to the default flow loaded by Node-RED, which can be found under the directory:
+
+```
+~/.node-red
+```
+
+<img src="images/node-red-flow.png" width="400">
+
+The backup files can be saved to the libarary folder:
+
+```
+~/.node-red/lib/flows
+```
+
+<img src="images/node-red-flow-backup.png" width="600">
 
 ## Errors in Nodes ##
 
@@ -233,7 +249,7 @@ Inside the autostart file, add the following commands before the command __@xscr
 
 The resulting file would look like:
 
-![](iamges/autostart.png)
+<img src="images/autostart.png" width="600">
 
 Save and exit the file with:
 
