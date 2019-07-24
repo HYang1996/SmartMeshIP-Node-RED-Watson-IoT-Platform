@@ -197,6 +197,7 @@ Add in the following content:
 
 cd /home/pi/smartmeshsdk-master/app/JsonServer
 python JsonServer/.py
+read -p "Press Any Key to Exit"
 ```
 
 Save and exit the file with:
@@ -217,11 +218,22 @@ Navigate and open the LXDE autostart file:
 sudo nano ~/.config/lxsession/LXDE-pi/autostart
 ```
 
-Two commands to run JsonServer.sh and Node-RED flows can be added before the last line (adding commands at the end may result in them not running), and the resutant file should look like:
+If the file does not exist on Raspberry Pi 3, try this command:
 
 ```
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+```
+
+Inside the autostart file, add the following commands before the command __@xscreensaver -no-splash__ (adding commands at the end may result in them not running):
 
 ```
+@lxterminal --command="/home/pi/JsonServer.sh"
+@lxterminal --command="node-red-start"
+```
+
+The resulting file would look like:
+
+![](iamges/autostart.png)
 
 Save and exit the file with:
 
