@@ -197,7 +197,7 @@ Add in the following content:
 
 cd /home/pi/smartmeshsdk-master/app/JsonServer
 python JsonServer/.py
-read -p "Press Any Key to Exit"
+read -p "Press Enter to Exit"
 ```
 
 Save and exit the file with:
