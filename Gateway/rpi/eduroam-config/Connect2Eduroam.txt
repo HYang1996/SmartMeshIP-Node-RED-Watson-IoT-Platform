@@ -39,6 +39,8 @@ followed by the command:
 
 sudo ./eduroam-pi-config
 
+(use "sudo perl ./eduroam-pi-config" if the previous one does not work)
+
 It will ask for your UCL userid. Enter this with the @ucl.ac.uk. Then it will ask for your password to be entered twice. As long as those passwords match it will write the config file to /etc/wpa_supplicant/wpa_supplicant.conf. 
 
 10) Now restart your RPi.
