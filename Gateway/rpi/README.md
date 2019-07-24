@@ -201,10 +201,7 @@ python JsonServer/.py
 
 Save and exit the file with:
 
-```
 <kbd>Ctrl</kbd> + <kbd>X</kbd> , <kbd>Y</kbd>, <kbd>Enter<kbd>
-```
-
 
  It is important to ensure the file is executable, which can be achieved with:
 
