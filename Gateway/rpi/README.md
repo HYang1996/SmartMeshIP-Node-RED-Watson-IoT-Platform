@@ -89,7 +89,7 @@ cd /home/pi/smartmeshsdk-master
 Start the setup with the command
 
 ```
-python setup.py
+python setup.py install
 ```
 
 To run the JsonServer application properly, direct to the application folder:
