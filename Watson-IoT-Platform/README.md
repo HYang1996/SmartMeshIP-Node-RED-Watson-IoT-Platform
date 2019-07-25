@@ -96,3 +96,33 @@ There are two variables to be configured:
 1. ```flow.set('serialPort','/dev/tty.usbserial-00002014D')```, this is the serialPort to which the manager is connected, and the port here is __/dev/tty.usbserial-00002014D__
 
 1. ```flow.set('manager','582857')```, this is the name of the manager that the user wish to connect to, similar to the one configured in the previous flow, and it is __582857__ in this case
+
+Once the flow is deployed, inject the manager configuration function to set the specific serialPort and manager.
+
+The manager dashboard can then be viewed online, at the same url of the Node-RED application followed by an additional /ui. For example, the link to the applicaion is this case is:
+
+```
+http://redshift.eu-gb.mybluemix.net
+```
+
+and the dashboard can be viewed at:
+
+```
+http://redshift.eu-gb.mybluemix.net/ui
+```
+
+When the dashboard is opened, a page similar to this will be shown (without the specific statistics):
+
+![](images/dashboard-manager-ui.png)
+
+Serveral functions can be achieved in this dashboard:
+
+1. By clicking on the ```UPDATE NETWORK INFORMATION``` button, the user will enable the flow to send request for network information of the manager selected, that is currently connected on the Watson IoT Platform. The returned statistics of the network will be displayed.
+
+1. By clicking on the ```UPDATE MOTES``` button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
+
+1. The ```Select Mote``` dropdown list will show the returned active motes from the previous command, and the user can select a specific mote by clicking on it, and the dropdown list will be updated with the mote selected:
+
+<img src="images/mote-selected.png" width="400">
+
+1. Once the mote is selected, by clicking on the ```UPDATE MOTE INFORMATION``` button, the user will enable the flow to send request for information of the mote selected, and the returned statistics will be displayed.
