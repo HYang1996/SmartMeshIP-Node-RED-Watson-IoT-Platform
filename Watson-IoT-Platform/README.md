@@ -27,11 +27,11 @@ The ibmiot nodes are used for the cloud Node-RED flows, which enable the flows t
 
 Click on any of the node and bring up the following:
 
-<img src="images/ibmiot-configure.png" width="400">
+<img src="images/ibmiot-configure.png" width="600">
 
 The __Authentication__ method is chosen as __API Key__, and a new API Key can be added:
 
-<img src="images/ibmiot-API.png" width="400">
+<img src="images/ibmiot-API.png" width="600">
 
 The __Name__ can be customised, and the next three configurations are done as such:
 
@@ -53,11 +53,11 @@ This flow should look like the following:
 
 The first part of the flow requires the user to set variables of the flow:
 
-<img src="images/gateway-configure.png" width="400">
+<img src="images/gateway-configure.png" width="600">
 
 Flow variables can be set in the function named "configure here first", and this should be done before the flows are deployed:
 
-<img src="images/gateway-configure-function.png" width="400">
+<img src="images/gateway-configure-function.png" width="600">
 
 Ther are three variables to be configured:
 
@@ -73,7 +73,7 @@ After setting up the variables, the flow can be deployed. When the inject node i
 
 The second part of the flow enables the user to receive the JsonServerResponse from the manager and messages from the mote:
 
-<img src="images/responses.png" width="400">
+<img src="images/responses.png" width="500">
 
 The remaining part of the flow allows the user to inject enable/disable of each pin to the mote.
 
@@ -85,11 +85,11 @@ This flow allows a manager to be manually configured first, and its information 
 
 The node-red-dashboard palette has to be installed first:
 
-<img src="images/node-red-dashboard.png" width="300">
+<img src="images/node-red-dashboard.png" width="400">
 
 The manager is manully set up in the __configure here first__ function node:
 
-<img src="images/manager-configure.png" width="300">
+<img src="images/manager-configure.png" width="400">
 
 There are two variables to be configured:
 
