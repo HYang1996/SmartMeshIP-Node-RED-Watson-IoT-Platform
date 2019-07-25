@@ -85,11 +85,11 @@ This flow allows a manager to be manually configured first, and its information 
 
 The node-red-dashboard palette has to be installed first:
 
-<img src="images/node-red-dashboard.png" width="400">
+<img src="images/node-red-dashboard.png" width="600">
 
 The manager is manully set up in the __configure here first__ function node:
 
-<img src="images/manager-configure.png" width="400">
+<img src="images/manager-configure.png" width="600">
 
 There are two variables to be configured:
 
