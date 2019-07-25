@@ -25,7 +25,7 @@ This flow should look like the following:
 
 The first part of the flow requires the user to set variables of the flow:
 
-<img src="images/gateway-configure" width="400">
+<img src="images/gateway-configure.png" width="400">
 
 Flow variables can be set in the function named "configure here first", and this should be done before the flows are deployed:
 
@@ -39,4 +39,4 @@ Ther are three variables to be configured:
 
 After setting up the variables, the flow can be deployed. When the inject node is pressed, a message should appear to show that the flow variables are configured:
 
-<img src="images/gateway-configure-message.png" width="200">
+<img src="images/gateway-configure-message.png" width="400">
