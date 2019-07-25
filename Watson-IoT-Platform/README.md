@@ -26,7 +26,7 @@ The ibmiot nodes are used for the cloud Node-RED flows, which enable the flows t
 
 Click on any of the node and bring up the following:
 
-<img src="images/ibmiot-configure.png" width="300">
+<img src="images/ibmiot-configure.png" width="400">
 
 The __Authentication__ method is chosen as __API Key__, and a new API Key can be added:
 
@@ -38,7 +38,7 @@ The __Name__ can be customised, and the next three configurations are done as su
 
 1. ```API Token : nEj(AAFOdRT(8CgmH)```, this is the API Token of the Watson IoT Platform application
 
-1. ```Server-Name : f1bk1s.messaging.internetofthings.ibmcloud.com:8883```, this is the server name to connect to. It follows the format as __[orgId].messaging.internetofthings.ibmcloud.com:8883__
+1. ```Server-Name : f1bk1s.messaging.internetofthings.ibmcloud.com:8883```, this is the server name to connect to. It follows the format as __[orgId].messaging.internetofthings.ibmcloud.com:8883__, where __[orgId]__ is the organisation ID of the Watson IoT Platform applicaiton
 
 Once the API information is configured correctly, the nodes will show as connected when the flow is deployed:
 
