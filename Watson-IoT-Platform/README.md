@@ -1,7 +1,7 @@
 Table of Contents
 =================
 1. [Introduction](#introduction)
-1. [Gateway_Manual_Configuration](#gateway-manual-configuration)
+1. [Gateway Manual Configuration](#gateway-manual-configuration)
 
 # Introduction #
 
@@ -17,7 +17,7 @@ The file contains 5 individual flows, which are listed below with a short summar
 1. [__Pin_Status__](#pin-status): to obtain information about the status of each pin on a specific mote
 1. [__DB2__](#db2-on-cloud): to store data to the SQL database, DB2 on Cloud
 
-# Gateway_Manual_Configuration #
+# Gateway Manual Configuration #
 
 This flow should look like the following:
 
@@ -25,13 +25,18 @@ This flow should look like the following:
 
 The first part of the flow requires the user to set variables of the flow:
 
-![](images/gateway-configure.png)
+<img src="images/gateway-configure" width="400">
 
 Flow variables can be set in the function named "configure here first", and this should be done before the flows are deployed:
 
-![](images/gateway-configure-function.png)
+<img src="images/gateway-configure-function.png" width="400">
 
 Ther are three variables to be configured:
 
 1. ```flow.set('manager','582857')```, the manager name is the one registered on the Watson IoT Platform (detailed guide under the __Create a Manager Device__ section in the [Basic-Setup-Guide](../Basic-Setup-Guide/README.md)), and the one used here is __582857__
-1. 
+1. ```flow.set('mote',   '00-17-0d-00-00-58-e9-cd')```, the mote name is the full mac address of the mote interested, and the one used here is __00-17-0d-00-00-58-e9-cd__
+1. ```flow.set('orgId',  'f1bk1s');```, the organisation ID refers to the one of the Watson IoT Platform application, which can also be found isn the [Basic-Setup-Guide](../Basic-Setup-Guide/README.md), and the one used here is __f1bk1s__
+
+After setting up the variables, the flow can be deployed. When the inject node is pressed, a message should appear to show that the flow variables are configured:
+
+<img src="images/gateway-configure-message.png" width="200">
