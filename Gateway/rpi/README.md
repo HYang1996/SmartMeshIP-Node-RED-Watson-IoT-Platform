@@ -247,6 +247,8 @@ Inside the autostart file, add the following commands before the command __@xscr
 @lxterminal --command="node-red-start"
 ```
 
+Note that it is not advised to run lxterminal with "sudo" command for the Node-RED flows (@sudo lxterminal --command="node-red-start") since it would cause the Node-RED to load flows from the /root/ directory and the flows under /home/pi/ directory would not be loaded.
+
 The resulting file would look like:
 
 <img src="images/autostart.png" width="600">
