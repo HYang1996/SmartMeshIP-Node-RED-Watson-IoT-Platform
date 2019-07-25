@@ -117,12 +117,12 @@ When the dashboard is opened, a page similar to this will be shown (without the 
 
 Serveral functions can be achieved in this dashboard:
 
-1. By clicking on the ```UPDATE NETWORK INFORMATION``` button, the user will enable the flow to send request for network information of the manager selected, that is currently connected on the Watson IoT Platform. The returned statistics of the network will be displayed.
+1. By clicking on the __```UPDATE NETWORK INFORMATION```__ button, the user will enable the flow to send request for network information of the manager selected, that is currently connected on the Watson IoT Platform. The returned statistics of the network will be displayed.
 
-1. By clicking on the ```UPDATE MOTES``` button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
+1. By clicking on the __```UPDATE MOTES```__button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
 
-1. The ```Select Mote``` dropdown list will show the returned active motes from the previous command, and the user can select a specific mote by clicking on it, and the dropdown list will be updated with the mote selected:
+1. The __```Select Mote```__ dropdown list will show the returned active motes from the previous command, and the user can select a specific mote by clicking on it, and the dropdown list will be updated with the mote selected:
 
 <img src="images/mote-selected.png" width="400">
 
-1. Once the mote is selected, by clicking on the ```UPDATE MOTE INFORMATION``` button, the user will enable the flow to send request for information of the mote selected, and the returned statistics will be displayed.
+1. Once the mote is selected, by clicking on the __```UPDATE MOTE INFORMATION```__ button, the user will enable the flow to send request for information of the mote selected, and the returned statistics will be displayed.
