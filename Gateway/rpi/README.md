@@ -6,6 +6,7 @@ Table of Contents
     * [Install Node-RED](#install-node-red)
     * [FTDI Driver Configuration](#ftdi-driver-configuration)
     * [Install JsonServer Application](#install-jsonserver-application)
+    * [Performance Improvement](#performance-improvement)
 1. [Configure Node-RED Flows](#configure-node-red-flows)
     * [Connect to Watson IoT Platform and Device Manager](#connect-to-watson-iot-platform-and-device-manager)
     * [Auto-backup](#auto-backup)
@@ -159,6 +160,24 @@ To disconnect the manager in order change to another one, the command can be use
 ```
 dm /dev/ttyUSB3
 ```
+
+## Performance Improvement ##
+
+According to Lindsay Bill from the Dust Support, there is a busy wait at line __168__ of __\smartmeshsdk-REL-1.3.0.1\libs\SmartMeshSDK\utils\SerialScanner.py__, which will consume an entire core of the quadcore Raspberry Pi CPU.
+
+Replace the line:
+
+```
+pass # wait for listenThread to stop
+```
+
+with:
+
+```
+time.sleep(0.5) # wait for listenThread to stop
+```
+
+This problem is also fixed in the pre-release build 1.3.1.2, which can be accessed [here](https://github.com/dustcloud/smartmeshsdk/releases).
 
 # Configure Node-RED Flows #
 
