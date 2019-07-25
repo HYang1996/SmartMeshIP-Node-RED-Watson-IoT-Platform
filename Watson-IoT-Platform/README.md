@@ -119,7 +119,7 @@ Serveral functions can be achieved in this dashboard:
 
 1. By clicking on the __```UPDATE NETWORK INFORMATION```__ button, the user will enable the flow to send request for network information of the manager selected, that is currently connected on the Watson IoT Platform. The returned statistics of the network will be displayed.
 
-1. By clicking on the __```UPDATE MOTES```__button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
+1. By clicking on the __```UPDATE MOTES```__ button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
 
 1. The __```Select Mote```__ dropdown list will show the returned active motes from the previous command, and the user can select a specific mote by clicking on it, and the dropdown list will be updated with the mote selected:
 
