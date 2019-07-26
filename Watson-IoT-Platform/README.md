@@ -181,7 +181,7 @@ This flow allows the user to obtain the states of a specific pin on the selected
 
 ![](images/dashboard-pin.png)
 
-The procedures to configure the variables used in this flow is the same as those in the [__Gateway Manual Configuration__](#gateway-manual-configuration) flow.
+The procedures to configure the variables used in this flow is the same as those in the other flows.
 
 After configuring the variables and deploying the flow, the user can then manually obatin the information on each pin by pressing the corresponding injection button.
 
