@@ -4,6 +4,8 @@ Table of Contents
 1. [ibmiot Node Configuration](#ibmiot-node-configuration)
 1. [Gateway Manual Configuration](#gateway-manual-configuration)
 1. [Manager Dashboard](#manager-dashboard)
+1. [Mote Dashboard](#mote-dashboard)
+1. [Pin States](#pin-states)
 
 # Introduction #
 
@@ -15,8 +17,8 @@ The file contains 5 individual flows, which are listed below with a short summar
 
 1. [__Gateway_Manual_Configuration__](#gateway-manual-configuration): to configure and receive information from a specific manager
 1. [__Dashboard_Manager__](#manager-dashboard): to display a dashboard containing information about a specific manager
-1. [__Dashboard_Mote__](#dashboard-mote): to display a dashboard containing information about a specific mote connected to a specific manager
-1. [__Pin_Status__](#pin-status): to obtain information about the status of each pin on a specific mote
+1. [__Dashboard_Mote__](#mote-dashboard): to display a dashboard containing information about a specific mote connected to a specific manager
+1. [__Pin_States__](#pin-states): to obtain information about the states of each pin on a specific mote
 1. [__DB2__](#db2-on-cloud): to store data to the SQL database, DB2 on Cloud
 
 # ibmiot Node Configuration #
@@ -97,7 +99,7 @@ There are two variables to be configured:
 
 1. ```flow.set('manager','582857')```, this is the name of the manager that the user wish to connect to, similar to the one configured in the previous flow, and it is __582857__ in this case
 
-Once the flow is deployed, inject the manager configuration function to set the specific serialPort and manager.
+Once the flow is deployed, inject the manager configuration function to set the specific serialPort and manager. Note that this has to be done __before lauching the dashboard UI__ in order for it to work properly.
 
 The manager dashboard can then be viewed online, at the same url of the Node-RED application followed by an additional /ui. For example, the link to the applicaion is this case is:
 
@@ -119,10 +121,58 @@ Serveral functions can be achieved in this dashboard:
 
 1. By clicking on the __```UPDATE NETWORK INFORMATION```__ button, the user will enable the flow to send request for network information of the manager selected, that is currently connected on the Watson IoT Platform. The returned statistics of the network will be displayed.
 
-1. By clicking on the __```UPDATE MOTES```__ button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
+2. By clicking on the __```UPDATE MOTES```__ button, the user will enable the flow to send request for active motes that are connected to the manager set in the flow.
 
-1. The __```Select Mote```__ dropdown list will show the returned active motes from the previous command, and the user can select a specific mote by clicking on it, and the dropdown list will be updated with the mote selected:
+3. The __```Select Mote```__ dropdown list will show the returned active motes from the previous command, and the user can select a specific mote by clicking on it, and the dropdown list will be updated with the mote selected:
 
 <img src="images/mote-selected.png" width="400">
 
-1. Once the mote is selected, by clicking on the __```UPDATE MOTE INFORMATION```__ button, the user will enable the flow to send request for information of the mote selected, and the returned statistics will be displayed.
+4. Once the mote is selected, by clicking on the __```UPDATE MOTE INFORMATION```__ button, the user will enable the flow to send request for information of the mote selected, and the returned statistics will be displayed.
+
+# Mote Dashboard #
+
+This flow allows a mote to be selected first, and the user is then able to view health reports from the mote, and to interact with all the inputs and outputs of the mote:
+
+![](images/dashboard-mote.png)
+
+The first part the flow allows the user to maunally set the manager that the flow is communicating to:
+
+<img src="images/mote-configure.png" width="400">
+
+The configuration is the same as one done in the [__Dashboard_Manager__](#manager-dashboard) flow, and the name of the mote can be left as __undefined__.
+
+The second part of the flow is in charge of updating the list of motes connected to the specific manager upon the user's request, and allows the user to select which mote to work on:
+
+<img src="images/mote-dashboard-selection.png" width="400">
+
+The third part of the flow listens to all events from the motes that are sent through the manager. It allows only the messages sent by the selected mote to pass through, and to be displayed on the dashboard:
+
+![](images/mote-dashboard-input.png)
+
+The fourth part of the flow receives the user's input from the dashboard, creates commands and sends them to the mote through the manager:
+
+![](images/mote-dashboard-output.png)
+
+When the dashboard is launched, the mote information page can be navigated on the sidebar:
+
+<img src="images/mote-dashboard-ui-sidebar.png" width="600">
+
+Upon clicking on the __Mote__ option, a page as such will be shown:
+
+![](images/mote-dashboard-ui.png)
+
+The first column, __Mote Selection & Health Report__ allows the user to select the mote and view its health report.
+
+Mote selection process here is identical to that in the manager page. Once the mote is selected, by pressing the __```SET SELECTED MANAGER AND MOTE```__ button, the user should see the manager and mote updated at __Current Manager__ as well as __Current Mote__. The health report will be automatically updated when the health report messages from the selected mote is sent to the manager.
+
+After selecting both the mote and the manager, the user can then proceed to manipulate the inputs and outputs of the mote.
+
+The second column of the dashboard contains the __temperature__ information. Note that the default states of all enable buttons on the dashboard are __"off"__. However, the gauges will show the readings if there are messages of the corresponding ports coming through. If the temperature is enabled, for example, the gauge will now start displaying the deceived temperature. The other information of the sample, including the sample rate, the sample size as well as the timestamp of the sample will also be shown. The user can set the sample rate at the __```Desired Sample Rate```__ section which ranges from 1000 ms to 300000 ms. Once the rate is selected, it can be set on the mote when the user presses the __```SET TEMPERATURE SAMPLE RATE```__ button.
+
+The third column of the dashboard contains the __digital input__ information of all 4 digital input pins. The settings are similar to that of the temperature.
+
+The fourth column of the dashboard allows the user to toggle the two digital output pins as well as the LED onboard (their default state is "off" even if any of the output is previously set to be "on").
+
+The last column of the dashboard contains the __analog input__ information of all 4 analog input pins. Their configurations are similar to those of the digital input pins.
+
+# Pin States #
