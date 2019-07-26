@@ -176,3 +176,13 @@ The fourth column of the dashboard allows the user to toggle the two digital out
 The last column of the dashboard contains the __analog input__ information of all 4 analog input pins. Their configurations are similar to those of the digital input pins.
 
 # Pin States #
+
+This flow allows the user to obtain the states of a specific pin on the selected mote. The flow also updates the global variables that store the enable information on each pin on each mote, which is useful while transferring the received data to an online database:
+
+![](images/dashboard-pin.png)
+
+The procedures to configure the variables used in this flow is the same as those in the [__Gateway Manual Configuration__](#gateway-manual-configuration) flow.
+
+After configuring the variables and deploying the flow, the user can then manually obatin the information on each pin by pressing the corresponding injection button.
+
+# DB2 on Cloud #
