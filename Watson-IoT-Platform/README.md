@@ -137,13 +137,13 @@ This flow allows a mote to be selected first, and the user is then able to view 
 
 The first part the flow allows the user to maunally set the manager that the flow is communicating to:
 
-<img src="images/mote-configure.png" width="400">
+<img src="images/mote-configure.png" width="600">
 
 The configuration is the same as one done in the [__Dashboard_Manager__](#manager-dashboard) flow, and the name of the mote can be left as __undefined__.
 
 The second part of the flow is in charge of updating the list of motes connected to the specific manager upon the user's request, and allows the user to select which mote to work on:
 
-<img src="images/mote-dashboard-selection.png" width="400">
+<img src="images/mote-dashboard-selection.png" width="600">
 
 The third part of the flow listens to all events from the motes that are sent through the manager. It allows only the messages sent by the selected mote to pass through, and to be displayed on the dashboard:
 
@@ -155,7 +155,7 @@ The fourth part of the flow receives the user's input from the dashboard, create
 
 When the dashboard is launched, the mote information page can be navigated on the sidebar:
 
-<img src="images/mote-dashboard-ui-sidebar.png" width="600">
+<img src="images/mote-dashboard-ui-sidebar.png" width="400">
 
 Upon clicking on the __Mote__ option, a page as such will be shown:
 
