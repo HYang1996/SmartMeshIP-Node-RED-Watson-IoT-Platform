@@ -25,13 +25,13 @@ The script and instructions used to do so can be found under the folder [eduroam
 
 ## Update to Jessie ##
 
-In order to install Node-RED preperly, the Pi has to be updated from Wheezy to Jessie.
+In order to install Node-RED properly, the Pi has to be updated from Wheezy to Jessie.
 
 A useful and tested tutorial to do so can be found in this [link](https://www.howtoforge.com/tutorial/how-to-upgrade-debian-wheezy-to-jessie-stable-release/).
 
 ## Install Node-RED ##
 
-Once the system is set up, Nore-RED can be [installed](https://nodered.org/docs/getting-started/raspberrypi) with the code:
+Once the system is set up, Node-RED can be [installed](https://nodered.org/docs/getting-started/raspberrypi) with the code:
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
@@ -105,7 +105,7 @@ Start the application with the command:
 python JsonServer.py
 ```
 
-To connect the manager in the application, the following commnad can be used (where /dev/ttyUSB3 is the API port to communicate with the manager, which can be found in the [FTDI configuration section](#ftdi-driver-configuration)):
+To connect the manager in the application, the following command can be used (where /dev/ttyUSB3 is the API port to communicate with the manager, which can be found in the [FTDI configuration section](#ftdi-driver-configuration)):
 
 ```
 cm /dev/ttyUSB3
@@ -211,7 +211,7 @@ The backup files can be saved to the library folder:
 
 ## Errors in Nodes ##
 
-Errors and notifications of displayed on the Pi's Node-RED nodes, such as the ones shonw below, can be ignored and the flows cna be deployed, as long as the flows are tested to be running properly on other devices.
+Errors and notifications of displayed on the Pi's Node-RED nodes, such as the ones shown below, can be ignored and the flows can be deployed, as long as the flows are tested to be running properly on other devices.
 
 # Run Services on Boot #
 
