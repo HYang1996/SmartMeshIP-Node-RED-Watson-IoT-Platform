@@ -259,7 +259,7 @@ CREATE TABLE DATA (
 	"DeviceID"  varchar(50),
 	"Temperature" float,
 	"Digital_D0" float,
-    "Digital_D1" float,
+    	"Digital_D1" float,
 	"Digital_D2" float,
 	"Digital_D3" float,
 	"Analog_A0" float,
