@@ -10,6 +10,7 @@ Table of Contents
     * [Setting up DB2 on Cloud](#setting-up-db2-on-cloud)
     * [Using the DB2 on Cloud Database](#using-the-db2-on-cloud-database)
     * [Store Data to DB2 Database through Node-RED Flows](#store-data-to-db2-database-through-node-red-flows)
+1. [Retrieve Flows](#retrieve-flows)
 
 # Introduction #
 
@@ -324,3 +325,35 @@ The pins that are not required can be disabled by simply putting the value as 0.
 It can be noticed that __"|0"__ is present after each flow variable. This is because when the data is received in the messages, it may be in the array form. Sending array variables to the DB2 database would result in the Node-RED application crashing. In fact, sending any data that is not in the same as the one defined in the table would cause the application to crash.
 
 A delay node is also present in the flow before the queries are sent to the database. This is because the DB2 on Cloud database would allow only 5 concurrent global queries. Without the delay node, the queries may be sent at a rate so high that will be rejected by the database. It has been tested that sending 1 queries per second is completely safe.
+
+# Retrieve Flows #
+
+In the event where the online Node-RED application stops running, the flows may still be able to be retrieved as they are constantly updated and stored in the online database.
+
+Under the __Resource List__ of the IBM Cloud platform, a default __cloudant database__ can be accessed under the __services__ category:
+
+![](images/ibm-cloudant.png)
+
+After launching its dashboard, a database with the name __"nodered"__ should be present:
+
+![](images/cloudant-dashboard.png)
+
+In the "nodered" folder, the flows are stored in the **_ApplicationName_/flow** file:
+
+![](images/cloudant-file.png)
+
+Opening the file will bring up a page with the JSON flows:
+
+![](images/cloudant-flow.png)
+
+An additional step has to be done to obtain the actual flows that have been created. It can be seen that the file is organised in the following format:
+
+```
+{
+    "id" : //database id,
+    "_rev" : //rev,
+    "flow" : //actual Node-RED flows
+}
+```
+
+Copy and paste the entire JSON array (everything in between __[ ]__) into a text file, and the file can be stored in the __.json__ format.
