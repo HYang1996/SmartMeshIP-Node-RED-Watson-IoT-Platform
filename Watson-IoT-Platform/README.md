@@ -203,7 +203,7 @@ Next, search for "DB2", and click on the one under "Databases" category:
 
 In the new page, fill up the necessary information, choose the __Lite__ plan, and click the __```Create```__ button to create the service:
 
-![](image/db2-create.png)
+![](images/db2-create.png)
 
 Now navigate back to the resource list of IBM cloud platform, and the DB2 database should appear under __Cloud Foundry Services__:
 
