@@ -356,4 +356,4 @@ An additional step has to be done to obtain the actual flows that have been crea
 }
 ```
 
-Copy and paste the entire JSON array (everything in between __[ ]__) into a text file, and the file can be stored in the __.json__ format.
+Copy and paste the entire JSON array (everything in between, and including the __[ ]__) into a text file, and the file can be stored in the __.json__ format.
