@@ -6,6 +6,10 @@ Table of Contents
 1. [Manager Dashboard](#manager-dashboard)
 1. [Mote Dashboard](#mote-dashboard)
 1. [Pin States](#pin-states)
+1. [DB2 on Cloud](#db2-on-cloud)
+    * [Setting up DB2 on Cloud](#setting-up-db2-on-cloud)
+    * [Using the DB2 on Cloud Database](using-the-db2-on-cloud-databse)
+    * [Store Data to DB2 Database through Node-RED Flows](#store-data-to-db2-databse-through-node-red)
 
 # Introduction #
 
@@ -61,7 +65,7 @@ Flow variables can be set in the function named "configure here first", and this
 
 <img src="images/gateway-configure-function.png" width="600">
 
-Ther are three variables to be configured:
+There are three variables to be configured:
 
 1. ```flow.set('manager','582857')```, the manager name is the one registered on the Watson IoT Platform (detailed guide under the __Create a Manager Device__ section in the [Basic-Setup-Guide](../Basic-Setup-Guide/README.md)), and the one used here is __582857__
 
@@ -89,7 +93,7 @@ The node-red-dashboard palette has to be installed first:
 
 <img src="images/node-red-dashboard.png" width="600">
 
-The manager is manully set up in the __configure here first__ function node:
+The manager is manually set up in the __configure here first__ function node:
 
 <img src="images/manager-configure.png" width="600">
 
@@ -99,9 +103,9 @@ There are two variables to be configured:
 
 1. ```flow.set('manager','582857')```, this is the name of the manager that the user wish to connect to, similar to the one configured in the previous flow, and it is __582857__ in this case
 
-Once the flow is deployed, inject the manager configuration function to set the specific serialPort and manager. Note that this has to be done __before lauching the dashboard UI__ in order for it to work properly.
+Once the flow is deployed, inject the manager configuration function to set the specific serialPort and manager. Note that this has to be done __before launching the dashboard UI__ in order for it to work properly.
 
-The manager dashboard can then be viewed online, at the same url of the Node-RED application followed by an additional /ui. For example, the link to the applicaion is this case is:
+The manager dashboard can then be viewed online, at the same url of the Node-RED application followed by an additional /ui. For example, the link to the application is this case is:
 
 ```
 http://redshift.eu-gb.mybluemix.net
@@ -117,7 +121,7 @@ When the dashboard is opened, a page similar to this will be shown (without the 
 
 ![](images/dashboard-manager-ui.png)
 
-Serveral functions can be achieved in this dashboard:
+Several functions can be achieved in this dashboard:
 
 1. By clicking on the __```UPDATE NETWORK INFORMATION```__ button, the user will enable the flow to send request for network information of the manager selected, that is currently connected on the Watson IoT Platform. The returned statistics of the network will be displayed.
 
@@ -135,7 +139,7 @@ This flow allows a mote to be selected first, and the user is then able to view 
 
 ![](images/dashboard-mote.png)
 
-The first part the flow allows the user to maunally set the manager that the flow is communicating to:
+The first part the flow allows the user to manually set the manager that the flow is communicating to:
 
 <img src="images/mote-configure.png" width="600">
 
@@ -169,11 +173,11 @@ After selecting both the mote and the manager, the user can then proceed to mani
 
 The second column of the dashboard contains the __temperature__ information. Note that the default states of all enable buttons on the dashboard are __"off"__. However, the gauges will show the readings if there are messages of the corresponding ports coming through. If the temperature is enabled, for example, the gauge will now start displaying the deceived temperature. The other information of the sample, including the sample rate, the sample size as well as the timestamp of the sample will also be shown. The user can set the sample rate at the __```Desired Sample Rate```__ section which ranges from 1000 ms to 300000 ms. Once the rate is selected, it can be set on the mote when the user presses the __```SET TEMPERATURE SAMPLE RATE```__ button.
 
-The third column of the dashboard contains the __digital input__ information of all 4 digital input pins. The settings are similar to that of the temperature.
+The third column of the dashboard contains the __digital input__ information of all four digital input pins. The settings are similar to that of the temperature.
 
 The fourth column of the dashboard allows the user to toggle the two digital output pins as well as the LED onboard (their default state is "off" even if any of the output is previously set to be "on").
 
-The last column of the dashboard contains the __analog input__ information of all 4 analog input pins. Their configurations are similar to those of the digital input pins.
+The last column of the dashboard contains the __analog input__ information of all four analog input pins. Their configurations are similar to those of the digital input pins.
 
 # Pin States #
 
@@ -181,8 +185,96 @@ This flow allows the user to obtain the states of a specific pin on the selected
 
 ![](images/dashboard-pin.png)
 
-The procedures to configure the variables used in this flow is the same as those in the other flows.
+The procedures to configure the variables used in this flow are the same as those in the other flows.
 
-After configuring the variables and deploying the flow, the user can then manually obatin the information on each pin by pressing the corresponding injection button.
+After configuring the variables and deploying the flow, the user can then manually obtain the information on each pin by pressing the corresponding injection button.
 
 # DB2 on Cloud #
+
+## Setting up DB2 on Cloud ##
+
+First, navigate to the IBM cloud dashboard, and click on the __```Create resource```__ button:
+
+![](images/ibm-cloud.png)
+
+Next, search for "DB2", and click on the one under "Databases" category:
+
+![](images/db2.png)
+
+In the new page, fill up the necessary information, choose the __Lite__ plan, and click the __```Create```__ button to create the service:
+
+![](image/db2-create.png)
+
+Now navigate back to the resource list of IBM cloud platform, and the DB2 database should appear under __Cloud Foundry Services__:
+
+![](images/services.png)
+
+Click on the resource, and navigate to __Service credentials__ from the sidebar. Create a new service credential of the database by clicking on the __```New credential```__ button. The newly created service can then be viewed:
+
+![](images/new-credential.png)
+
+The database can be accessed by navigating to __Manage__ section from the sidebar, and click on the __```Open Console```__ button:
+
+![](images/db2-manage.png)
+
+A page similar to the one below will then be shown:
+
+![](images/db2-on-cloud.png)
+
+## Using the DB2 on Cloud Database ##
+
+Functions of the database can be accessed from the sidebar:
+
+<img src="images/db2-sidebar.png" width="600">
+
+The __RUN SQL__ section allows the user to run SQL queries on the online database:
+
+![](images/db2-run-sql.png)
+
+The __EXPLORE__ section allows the user to explore the databases that have been created:
+
+![](images/db2-explore.png)
+
+Note that the new tables created will be stored in the default schema, which is __MTX66746__ in this case, at the time of this project, no additional schema can be created by the user through SQL queries.
+
+## Store Data to DB2 Database through Node-RED Flows ##
+
+The flow named __DB2__ is in charge of passing the received data to the designated database:
+
+![](images/db2-flow.png)
+
+The first part of the flow allows the user to create a table in the database. The __dashDB__ node allows the user to configure the connection to the database, as well as the SQL queries:
+
+![](images/db2-flow-dashdb.png)
+
+The DashDB palette has to be installed first:
+
+<img src="images/dashdb-palette.png" width="600">
+
+The query in the node is as such:
+
+```
+CREATE TABLE DATA (
+	"Timestamp" varchar(20),
+	"DeviceID"  varchar(50),
+	"Temperature" float,
+	"Digital_D0" float,
+    "Digital_D1" float,
+	"Digital_D2" float,
+	"Digital_D3" float,
+	"Analog_A0" float,
+	"Analog_A1" float,
+	"Analog_A2" float,
+	"Analog_A3" float
+)
+```
+
+This allows a table named "DATA" to be created with columns storing timestamps, device IDs, and all readings. This query can also be run in the [__RUN SQL__](#using-the-db2-on-cloud-database) section.
+
+The Server tab should be configured to match the service credential of the database:
+
+<img src="images/db2-server.png" width="600">
+
+The information required to complete this section can be found in the [__Service credentials__](#setting-up-db2-on-cloud) section of the DB2 on cloud service that has been created, the corresponding information has been highlighted below:
+
+![](images/db2-credential-highlighted.png)
