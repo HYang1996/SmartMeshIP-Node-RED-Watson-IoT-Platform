@@ -8,7 +8,7 @@ Table of Contents
 1. [Pin States](#pin-states)
 1. [DB2 on Cloud](#db2-on-cloud)
     * [Setting up DB2 on Cloud](#setting-up-db2-on-cloud)
-    * [Using the DB2 on Cloud Database](using-the-db2-on-cloud-databse)
+    * [Using the DB2 on Cloud Database](#using-the-db2-on-cloud-databse)
     * [Store Data to DB2 Database through Node-RED Flows](#store-data-to-db2-databse-through-node-red)
 
 # Introduction #
