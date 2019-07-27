@@ -278,3 +278,49 @@ The Server tab should be configured to match the service credential of the datab
 The information required to complete this section can be found in the [__Service credentials__](#setting-up-db2-on-cloud) section of the DB2 on cloud service that has been created, the corresponding information has been highlighted below:
 
 ![](images/db2-credential-highlighted.png)
+
+It can be seen in the function node in charge of formatting the data collected that there are two data transmission options are available:
+
+![](images/db2-flow-data.png)
+
+The reason why data of all columns are sent as once is because this is the required format for the dashDB node to send queries to the database. Incomplete data may fail to be sent. Hence, the data is stored in flow variables as it is received at the beginning of the flow.
+
+The first option is to transmit data based on whether the input pins are enabled. This is to prevent the flow variables to be sent when they are not updated (with their corresponding pins disabled):
+
+```
+    'Temperature' : (global.get(msg.deviceId+'.TempEnable')==1) ? flow.get(msg.deviceId + '.Temp')|0 : 0,
+    'Digital_D0' : (global.get(msg.deviceId+'.D0Enable')==1) ? flow.get(msg.deviceId + '.D0')|0 : 0,
+    'Digital_D1' : (global.get(msg.deviceId+'.D1Enable')==1) ? flow.get(msg.deviceId + '.D1')|0 : 0,
+    'Digital_D2' : (global.get(msg.deviceId+'.D2Enable')==1) ? flow.get(msg.deviceId + '.D2')|0 : 0,
+    'Digital_D3' : (global.get(msg.deviceId+'.D3Enable')==1) ? flow.get(msg.deviceId + '.D3')|0 : 0,
+    'Analog_A0' : (global.get(msg.deviceId+'.A0Enable')==1) ? flow.get(msg.deviceId + '.A0')|0 : 0,
+    'Analog_A1' : (global.get(msg.deviceId+'.A1Enable')==1) ? flow.get(msg.deviceId + '.A1')|0 : 0,
+    'Analog_A2' : (global.get(msg.deviceId+'.A2Enable')==1) ? flow.get(msg.deviceId + '.A2')|0 : 0,
+    'Analog_A3' : (global.get(msg.deviceId+'.A3Enable')==1) ? flow.get(msg.deviceId + '.A3')|0 : 0
+```
+
+The enable variables in this case can be updated in the previous flow, [__Pin States__](#pin-states), by injecting corresponding nodes.
+
+The second option is to transmit data based on manual configuration:
+
+```
+    'Temperature' : flow.get(msg.deviceId + '.Temp')|0,
+    'Digital_D0'  : flow.get(msg.deviceId + '.D0')  |0,
+    'Digital_D1'  : flow.get(msg.deviceId + '.D1')  |0,
+    'Digital_D2'  : flow.get(msg.deviceId + '.D2')  |0,
+    'Digital_D3'  : flow.get(msg.deviceId + '.D3')  |0,
+    'Analog_A0'   : flow.get(msg.deviceId + '.A0')  |0,
+    'Analog_A1'   : flow.get(msg.deviceId + '.A1')  |0,
+    'Analog_A2'   : flow.get(msg.deviceId + '.A2')  |0,
+    'Analog_A3'   : flow.get(msg.deviceId + '.A3')  |0
+```
+
+The pins that are not required can be disabled by simply putting the value as 0. For example:
+
+```
+'Digital_D0'  : 0
+```
+
+It can be noticed that __"|0"__ is present after each flow variable. This is because when the data is received in the messages, it may be in the array form. Sending array variables to the DB2 database would result in the Node-RED application crashing. In fact, sending any data that is not in the same as the one defined in the table would cause the application to crash.
+
+A delay node is also present in the flow before the queries are sent to the database. This is because the DB2 on Cloud database would allow only 5 concurrent global queries. Without the delay node, the queries may be sent at a rate so high that will be rejected by the database. It has been tested that sending 1 queries per second is completely safe.
