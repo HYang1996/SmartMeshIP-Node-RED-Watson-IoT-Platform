@@ -9,7 +9,7 @@ Table of Contents
 1. [DB2 on Cloud](#db2-on-cloud)
     * [Setting up DB2 on Cloud](#setting-up-db2-on-cloud)
     * [Using the DB2 on Cloud Database](#using-the-db2-on-cloud-database)
-    * [Store Data to DB2 Database through Node-RED Flows](#store-data-to-db2-database-through-node-red)
+    * [Store Data to DB2 Database through Node-RED Flows](#store-data-to-db2-database-through-node-red-flows)
 
 # Introduction #
 
