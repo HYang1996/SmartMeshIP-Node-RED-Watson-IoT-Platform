@@ -42,7 +42,7 @@ The documentations on the manager and the mote can be accessed within both the U
 
 ### Online Labs and Recipes ###
 
-1. [Dust Academy](https://dustcloud.atlassian.net/wiki/spaces/ALLDOC/pages/40468511/Dust+Academy)
+1. [Dust Academy](https://dustcloud.atlassian.net/wiki/spaces/ALLDOC/pages/40468511/Dust+Academy) (Completing the labs would provide a solid foundation for this project)
 
 1. [dustcloud](https://dustcloud.atlassian.net/wiki/spaces/ALLDOC/overview?mode=global)
 
