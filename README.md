@@ -20,11 +20,11 @@ This guide consists of the following components:
 3. Watson IoT Platform
 ```
 
-The [Basic Setup Guide](../Basic-Setup-Guide/README.md) provides a guide with detailed steps to setup the Watson IoT Platform to receive device messages from local Node-RED flows, and it is recommended to be done prior to proceeding to other aspects.
+The [Basic Setup Guide](Basic-Setup-Guide/README.md) provides a guide with detailed steps to setup the Watson IoT Platform to receive device messages from local Node-RED flows, and it is recommended to be done prior to proceeding to other aspects.
 
-The [Gateway](../Gateway/README.md) section showcases how Node-RED flows are implemented for the gateway managers, and how this can be set up on a Raspberry Pi.
+The [Gateway](Gateway/README.md) section showcases how Node-RED flows are implemented for the gateway managers, and how this can be set up on a Raspberry Pi.
 
-Finally, the [Watson IoT Platform](../Watson-IoT-Platform/README.md) section explains the functionality of the Node-RED flows that are hosted on the Watson IoT Platform, including the online dashboard as well as the SQL database to store the data collected.
+Finally, the [Watson IoT Platform](Watson-IoT-Platform/README.md) section explains the functionality of the Node-RED flows that are hosted on the Watson IoT Platform, including the online dashboard as well as the SQL database to store the data collected.
 
 # Getting to Know the Basics #
 
