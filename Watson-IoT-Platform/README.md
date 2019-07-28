@@ -1,7 +1,7 @@
 Table of Contents
 =================
 1. [Introduction](#introduction)
-1. [ibmiot Node Configuration](#ibmiot-node-configuration)
+1. [IBMIoT Node Configuration](#ibmiot-node-configuration)
 1. [Gateway Manual Configuration](#gateway-manual-configuration)
 1. [Manager Dashboard](#manager-dashboard)
 1. [Mote Dashboard](#mote-dashboard)
@@ -26,7 +26,7 @@ The file contains 5 individual flows, which are listed below with a short summar
 1. [__Pin_States__](#pin-states): to obtain information about the states of each pin on a specific mote
 1. [__DB2__](#db2-on-cloud): to store data to the SQL database, DB2 on Cloud
 
-# ibmiot Node Configuration #
+# IBMIoT Node Configuration #
 
 The ibmiot nodes are used for the cloud Node-RED flows, which enable the flows to communicate with the Watson IoT Platform:
 
@@ -82,7 +82,7 @@ The second part of the flow enables the user to receive the JsonServerResponse f
 
 <img src="images/responses.png" width="500">
 
-The remaining part of the flow allows the user to inject enable/disable of each pin to the mote.
+The remaining part of the flow allows the user to inject enable or disable of each pin to the mote.
 
 # Manager Dashboard #
 
