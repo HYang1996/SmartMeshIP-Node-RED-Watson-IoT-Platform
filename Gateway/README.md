@@ -2,7 +2,7 @@ Table of Contents
 =================
 1. [Introduction](#introduction)
 1. [Gateway](#gateway)
-    * [Connect to Watson IoT Paltform](#connect-to-watson-iot-platform)
+    * [Connect to Watson IoT Platform](#connect-to-watson-iot-platform)
     * [Connect to Device Manager](#connect-to-device-manager)
 1. [Auto-backup](#auto-backup)
 
@@ -52,4 +52,36 @@ After the information is correctly entered and the Update button is clicked, one
 
 # Auto-backup #
 
-This function is created in the event when the flow is accidentally lost on the hosting device.
+This function is created in the event when the flow is accidentally lost on the hosting device:
+
+![](images/backup.png)
+
+The flow is triggered automatically upon deployment. To enable proper reading and saving the flow files, there are two parts that are required to be configured.
+
+The first part tells the flow where the flow file is located:
+
+![](images/backup-read.png)
+
+Filenames are to be filled in including their full directories:
+
+![](images/backup-read-file.png)
+
+The Node-RED flows are usually saved under the directory:
+
+```
+~/.node-red
+```
+
+The second part tells the flow where the backup file is located:
+
+![](images/backup-save.png)
+
+Similarly, filenames are to be filled in including their full directory. A common choice to save them in is:
+
+```
+~/.node-red/lib/flows/
+```
+
+Once the flows are deployed, the user can navigate to the target folder to check if the flows are backed-up correctly. For example, it should show something similar to the following:
+
+<img src="images/backup-files.png" width="600">
