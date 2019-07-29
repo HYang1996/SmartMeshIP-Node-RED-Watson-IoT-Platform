@@ -272,6 +272,10 @@ CREATE TABLE DATA (
 
 This allows a table named "DATA" to be created with columns storing timestamps, device IDs, and all readings. This query can also be run in the [__RUN SQL__](#using-the-db2-on-cloud-database) section.
 
+After this is done, a table should be created in the database:
+
+![](images/db2-table.png)
+
 The Server tab should be configured to match the service credential of the database:
 
 <img src="images/db2-server.png" width="600">
@@ -325,6 +329,10 @@ The pins that are not required can be disabled by simply putting the value as 0.
 It can be noticed that __"|0"__ is present after each flow variable. This is because when the data is received in the messages, it may be in the array form. Sending array variables to the DB2 database would result in the Node-RED application crashing. In fact, sending any data that is not in the same as the one defined in the table would cause the application to crash.
 
 A delay node is also present in the flow before the queries are sent to the database. This is because the DB2 on Cloud database would allow only 5 concurrent global queries. Without the delay node, the queries may be sent at a rate so high that will be rejected by the database. It has been tested that sending 1 queries per second is completely safe.
+
+As data is sent to the database, they can be viewed online or be downloaded as CSV files:
+
+![](images/db2-table-data.png)
 
 # Retrieve Flows #
 
