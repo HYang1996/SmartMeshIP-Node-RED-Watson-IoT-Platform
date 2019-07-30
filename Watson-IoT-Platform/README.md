@@ -44,7 +44,7 @@ The __Name__ can be customised, and the next three configurations are done as su
 
 1. ```API Key : a-f1bk1s-agrwrczy7c```, this is the API Key of the Watson IoT Platform application, which has been created following the [setup guide](../Basic-Setup-Guide/README.md)
 
-1. ```API Token : nEj(AAFOdRT(8CgmH)```, this is the API Token of the Watson IoT Platform application
+1. ```API Token : ```, this is the API Token of the Watson IoT Platform application
 
 1. ```Server-Name : f1bk1s.messaging.internetofthings.ibmcloud.com:8883```, this is the server name to connect to. It follows the format as __[orgId].messaging.internetofthings.ibmcloud.com:8883__, where __[orgId]__ is the organisation ID of the Watson IoT Platform applicaiton
 
