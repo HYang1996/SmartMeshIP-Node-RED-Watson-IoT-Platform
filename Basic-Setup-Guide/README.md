@@ -139,7 +139,7 @@ Note that for the properties of the __wiotp-credentials node__, the correspondin
 * __Server-Name__: __[Organization ID].messaging.internetofthings.ibmcloud.com:8883__ (*Port is optional for added security*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
 * __Device Type__: __[Device Type]__ (same as the device type created previously, *example*: manager)
 * __Device ID__: __[Device ID]__ (*example*: 582857)
-* __Auth Token__: __[Authentication Token]__ (*example*: h(AZQiR7yR8S2dKc_5)
+* __Auth Token__: __[Authentication Token]__
 
 After clicking the __Update__ button to confirm the changes, and then the __Done__ button, the Watson IoT node should be in the __connected__ state after deploying the flow:
 
@@ -171,7 +171,7 @@ Note that for the properties of the __ibmiot node__, the corresponding informati
 
 * __Name__: __Watson_API__ (*can be customised*)
 * __API Key__: __[API Key]__ (*example*: a-f1bk1s-agrwrczy7c)
-* __API Token__: __[Authentication Token]__ (*example*: nEj(AAFOdRT(8CgmH))
+* __API Token__: __[Authentication Token]__
 * __Server-Name__: __[Organization ID].messaging.internetofthings.ibmcloud.com:8883__ (*Port is optional for added security, but shall match [the one set up on the local Node-RED flows](#set-up-watson-iot-node)*; *example*: f1bk1s.messaging.internetofthings.ibmcloud.com:8883)
 
 After clicking the __Update__ button and the __Done__ button, the __ibmiot__ node should show as connected once the flow is deployed:
