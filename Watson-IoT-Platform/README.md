@@ -284,7 +284,7 @@ The information required to complete this section can be found in the [__Service
 
 ![](images/db2-credential-highlighted.png)
 
-It can be seen in the function node in charge of formatting the data collected that there are two data transmission options are available:
+It can be seen in the function node in charge of formatting the data collected that there are two data transmission options available:
 
 ![](images/db2-flow-data.png)
 
