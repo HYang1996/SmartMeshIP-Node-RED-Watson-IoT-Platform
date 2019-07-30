@@ -204,7 +204,7 @@ The backup files can be saved to the library folder:
 
 ## Errors in Nodes ##
 
-Errors and notifications of displayed on the Pi's Node-RED nodes, such as the ones shown below, can be ignored and the flows can be deployed, as long as the flows are tested to be running properly on other devices.
+Errors and notifications of displayed on the Pi's Node-RED nodes can be ignored and the flows can be deployed, as long as the flows are tested to be running properly on other devices.
 
 # Run Services on Boot #
 
