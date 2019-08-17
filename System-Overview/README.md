@@ -1,5 +1,6 @@
 Table of Contents
 =================
+1. [Project Description](#project-description)
 1. [System Structure](#system-structure)
     * [Manager, Mote and Sensors](#manager-mote-and-sensors)
     * [Raspberry Gateway](#raspberry-pi-gateway)
@@ -8,6 +9,8 @@ Table of Contents
     * [Cloudant Database](#cloudant-database)
     * [DB2 on Cloud Database](#db2-on-cloud-database)
     * [User Devices](#user-devices)
+
+# Project Description #
 
 # System Structure #
 
