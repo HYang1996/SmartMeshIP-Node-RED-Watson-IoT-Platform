@@ -12,6 +12,12 @@ Table of Contents
 
 # Project Description #
 
+The aim of this project is to establish an end-to-end IoT system which can be deployed in a designated room, monitor the environment, collect and transmit data, store data, and allow the user to interact with the device and the data remotely.
+
+The project strives to provide an intuitive and low-maintenance system which allows it to be implemented easily by a student with little or no prior knowledge.
+
+By the end of the project, both the software and the hardware infrastructure is created. Detailed descriptions, explanation and tips are documented for each part of the system, allowing any new user of the system to become accustomed to the setup and maintenance processes.
+
 # System Structure #
 
 The overall structure of the implemented end-to-end system is shown in the digram below:
