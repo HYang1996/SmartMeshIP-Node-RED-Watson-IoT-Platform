@@ -93,4 +93,20 @@ The user is able to access the online Node-RED flows, the graphic user interface
 
 This largely enhances the accessibility and convenience of the designed system, making it a desired IoT solution to collect and manage data in the building.
 
+# Software Features #
+
+## Flow Backup ##
+
+
+
+## Automatic Deletion ##
+
+## SQL Database ##
+
 ## Fail-safe Mechanism ##
+
+# Hardware Features #
+
+## Deployment Design ##
+
+## Unit Design ##
