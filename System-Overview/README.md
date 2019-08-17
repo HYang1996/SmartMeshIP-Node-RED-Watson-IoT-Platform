@@ -9,6 +9,14 @@ Table of Contents
     * [Cloudant Database](#cloudant-database)
     * [DB2 on Cloud Database](#db2-on-cloud-database)
     * [User Devices](#user-devices)
+1. [Software Features](#software-features)
+    * [Flow Backup](#flow-backup)
+    * [Automatic Deletion](#automatic-deletion)
+    * [SQL Database](#sql-database)
+    * [Fail-safe Mechanism](#fail-safe-mechanism)
+1. [Hardware Features](#hardware-features)
+    * [Deployment Design](#deployment-design)
+    * [Unit Design](#unit-design)
 
 # Project Description #
 
@@ -84,3 +92,5 @@ This database is chosen since it is a low cost SQL database and hosted on the IB
 The user is able to access the online Node-RED flows, the graphic user interface and both databases on any device via the internet.
 
 This largely enhances the accessibility and convenience of the designed system, making it a desired IoT solution to collect and manage data in the building.
+
+## Fail-safe Mechanism ##
