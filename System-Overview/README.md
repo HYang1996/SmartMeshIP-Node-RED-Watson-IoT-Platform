@@ -1,7 +1,7 @@
 Table of Contents
 =================
 1. [System Structure](#system-structure)
-    * [Mote and Sensors](#manager,-mote-and-sensors)
+    * [Manager, Mote and Sensors](#manager,-mote-and-sensors)
 
 # System Structure #
 
