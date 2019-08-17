@@ -97,7 +97,11 @@ This largely enhances the accessibility and convenience of the designed system, 
 
 ## Flow Backup ##
 
+Both of the Node-RED flows on the gateway device and the cloud application are backed-up in different ways in order to prevent loss of flows in case of accidents.
 
+On the gateway devices, the flows are backed-up as individual files whenever a change is made to them. The detailed explanation on how this can be done is documented in the [**Gateway**](../Gateway/README.md) section. Each time the flows are manually deployed, a new file with the current timestamp in its name will be created and saved on the local device. In the event when the flows are lost in the Node-RED, the user can retrieve the backed-up flows manually by navigating to the designated directories on the device.
+
+The flows on the Node-RED application that is hosted on IBM Cloud are automatically backed-up in the Cloudant database which comes with the application. The detailed explanation on how to direct to the flow file and retrieve the flows is documented in the [**Watson-IoT-Platform**](../Watson-IoT-Platform/README.md) section.
 
 ## Automatic Deletion ##
 
