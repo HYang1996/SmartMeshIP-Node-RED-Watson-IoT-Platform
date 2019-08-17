@@ -5,6 +5,9 @@ Table of Contents
     * [Raspberry Gateway](#raspberry-pi-gateway)
     * [Watson IoT Platform](#watson-iot-platform)
     * [IBM Cloud Node-RED Application](#ibm-cloud-node-red-application)
+    * [Cloudant Database](#cloudant-database)
+    * [DB2 on Cloud Database](#db2-on-cloud-database)
+    * [User Devices](#user-devices)
 
 # System Structure #
 
@@ -26,7 +29,7 @@ The manager is connected to the gateway via USB connection, and communicates wit
 
 ## Raspberry Pi Gateway ##
 
-The gateway to host the manager in this project is the Raspberry Pi due to its small size. Both Raspberry Pi 2 and 3 are tested and verified to be working.
+The gateway to host the manager in this project is the Raspberry Pi due to its small size. Both Raspberry Pi 2 and 3 with Raspbian 8 or 9 are tested and verified to be working.
 
 There are two applications running on the gateway. One of them is the JsonServer application that comes with the SmartMeshSDK applications. This application is responsible for the serial API communication between the gateway and the manager. The other application hosted on the gateway is the Node-RED flow. This is an intuitive design to send and receive HTTP requests and responses, and to send MQTT messages to the Watson IoT platform (when the gateway is connected to the internet).
 
@@ -44,3 +47,31 @@ Various alternatives, such as the Microsoft Azure, Google Cloud IoT Core, and ot
 ## IBM Cloud Node-RED Application ##
 
 A Node-RED application is created and hosted on the IBM Cloud Service.
+
+This Node-RED application contains flows that are responsible for both the data collection as well as the data output and user input on the graphic user interface.
+
+This application is hosted on the IBM Cloud and can be running 24/7. It automatically receives and stores the data that is posted to the designated Watson IoT Platform by the manager.
+
+MQTT messages sent from the gateway to the broker can be read by the application, and user inputs are converted in to HTTP requests as MQTT messages and sent back to the gateway via the Watson IoT Platform.
+
+There is also a dashboard that comes with the Node-RED application, which acts as the user interface to monitor the managers and the motes remotely. The user is able to locate any manager and mote that is connected to the Watson IoT Platform, and to read and write data on the device.
+
+## Cloudant Database ##
+
+As the Node-RED application is created on the IBM Cloud Service, a corresponding Cloudant database is also created automatically.
+
+The most important feature of the database is that it automatically stores the Node-RED flows in the application whenever a change is made to it. This feature makes the Cloudant database a backup solution of the online flows, and allows the user to retrieve the flows as a JSON array when the application does not run properly.
+
+The database also allows data collected from the motes to be stored. However, it is not used in the project due to its NoSQL nature.
+
+## DB2 on Cloud Database ##
+
+The DB2 on Cloud database is used to store the device data in this project.
+
+This database is chosen since it is a low cost SQL database and hosted on the IBM Cloud Service. Note that the free lite database has 200 MB of storage space and has to be re-activated every 30 days.
+
+## User Devices ##
+
+The user is able to access the online Node-RED flows, the graphic user interface and both databases on any device via the internet.
+
+This largely enhances the accessibility and convenience of the designed system, making it a desired IoT solution to collect and manage data in the building.
