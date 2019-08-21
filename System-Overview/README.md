@@ -139,8 +139,6 @@ It can be seen from the table that the timestamp of the data collected and devic
 
 Detailed tutorial on how the table can be created, and its data populated from the Node-RED flow, can be found in the [Watson IoT Platform](../Watson-IoT-Platform/README.md) section.
 
-
-
 ## Fail-safe Mechanism ##
 
 # Hardware Features #
