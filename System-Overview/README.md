@@ -109,7 +109,37 @@ An issue found in the Watson IoT Platform is that it does allow a mote to be con
 
 A solution to this problem is that whenever a mote is disconnected from a manager, its corresponding mote type device on the platform is deleted, so that a new version of itself will be created by the new manager once a new connection is established. Thanks to the available palette online, a Device Manager node is used in the local Node-RED flows to detect a mote loss event and delete the corresponding mote device online. It should be noted that the gateway device which hosts the mote deletion flow shall **NOT** be powered off at least **1 minute** (sometimes it takes a longer time) after the mote is powered off. This is to allow the mote loss event to be detected by the manager. The user can also access the Watson IoT Platform to ensure that the mote device is indeed deleted.
 
+Detailed tutorial on how the mote manager nodes are configured can be found in the [Gateway](../Gateway/README.md) section.
+
 ## SQL Database ##
+
+One of the main objectives of the project is to provide a physical infrastructure for data collection which can later be used in other areas of study such as data analysis, localisation and so on.
+
+To record the raw data collected from the deployed motes in an intuitive fashion, online SQL database is chosen. In this way, not only can the database be accessed anywhere, anytime and by anyone with access to it, it is also in the format on which data analysis (such as SQL queries) can run easily.
+
+Fortunately, the DB2 on Cloud database is well integrated in the IBM cloud platform and can be written from the Node-RED application.
+
+The sample table on the database is designed to record all input readings from the motes. The table can be easily created both on the DB2 on Cloud online console, or from the online Node-RED flow. Therefore, the user has total freedom to create and edit the tables to suit the purpose of each project. The sample table definition is as such:
+
+|COLUMN NAME|DATA TYPE|
+|:---------:|:-------:|
+|Timestamp|VARCHAR|
+|DeviceID|VARCHAR|
+|Temperature|DOUBLE|
+|Digital_D0|DOUBLE|
+|Digital_D1|DOUBLE|
+|Digital_D2|DOUBLE|
+|Digital_D3|DOUBLE|
+|Analog_A0|DOUBLE|
+|Analog_A1|DOUBLE|
+|Analog_A2|DOUBLE|
+|Analog_A3|DOUBLE|
+
+It can be seen from the table that the timestamp of the data collected and device ID that is used to distinguish the data source are recorded in the format of characters, while the data sample themselves are recorded as double precision float data. This table is created such that data collected from all motes connected to the same manager will be stored in one place, characterised by their different device ID names. In the event where the user wish to store data from each mote in its respective table, multiple tables with different names can be created, and selective columns of input pins can be added. The user may also wish to store data in the modified formats (for instance, converting raw analog voltage readings to relative humidity in %). This can be easily achieved through creating new flows in the online Node-RED application (through filtering out device messages by the device IDs and then pass to different tables).
+
+Detailed tutorial on how the table can be created, and its data populated from the Node-RED flow, can be found in the [Watson IoT Platform](../Watson-IoT-Platform/README.md) section.
+
+
 
 ## Fail-safe Mechanism ##
 
