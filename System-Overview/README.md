@@ -141,6 +141,20 @@ Detailed tutorial on how the table can be created, and its data populated from t
 
 ## Fail-safe Mechanism ##
 
+Together with the hardware design, fail-safe features can be added to the system to improve its robustness. Due to the time constraint of the project, not all fail-safe mechanisms have been designed and tested.
+
+One of the mechanism tested is the battery level indicator. The battery level of the SmartMeshIP motes can be remotely accessed through the built-in commands and the manager. However, the sensors are designed to be powered by an external power supply at 4.5 V, which cannot be accessed remotely.
+
+In the event of battery level falling under roughly 3.5 V, the voltage level supplied to the sensors would fall below 3.3 V controlled by the linear voltage regulator. As such, the data recorded by the analog sensors would no longer be accurate. Therefore, a fail-safe design shall be designed to prevent the event from happening.
+
+A simple design has been created as the solution. A voltage divider with a ratio of 1/3 is used, with resistor at very high values. This voltage divider is then connected parallel with the power supply batteries. The output of the smaller load is connected to one of the analog input pins on the mote. When the battery is fully charged, the smaller load would have approximately 1.5 V across it (with one end connected to the ground). The 1.5 V signal is passed to the mote and can be read on the online Node-RED dashboard. The user can then constantly monitor the battery level. The resistor values are kept very high so that it drains negligible current from the power supply. An additional transistor switch may be added for the fail-safe mechanism circuit in order to further improve its power efficiency.
+
+A Node-RED flow is also resigned to send specific warning emails to the user when the battery level falls below a certain point. As such, it saves the trouble of the user to constantly monitor the changes, making the system more autonomous.
+
+It should be noted that the addition of fail-safe features is achieved by sacrificing some analog and digital pins. Therefore, the number of sensors that can be deployed on a single mote is reduced.
+
+Although fail-safe mechanisms are able to issue warnings before the malfunction of the system, they do come with trade-offs. As as result, future projects may explore how more efficient fail-safe mechanisms can be designed and deployed.
+
 # Hardware Features #
 
 ## Deployment Design ##
