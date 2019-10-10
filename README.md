@@ -61,3 +61,5 @@ The documentations on the manager and the mote can be accessed within both the U
 1. [Watson IoT Platform - 直接dashDBへデータを格納する](https://qiita.com/egplnt/items/2c911b7618517ebe9ba2)
 
 1. [Node-RED(QuickStart) のデータを dashDB に格納する](http://dotnsf.blog.jp/archives/1047589155.html)
+
+During the course of the project, only Japanese sources with detailed information regarding the topic of integration between Node-RED and DashDB were found. Although the descriptions are in Japanese, the user may wish to infer how the flows could be set up based on the screenshots (both Node-RED flows and JSON strings) provided in the sources.
