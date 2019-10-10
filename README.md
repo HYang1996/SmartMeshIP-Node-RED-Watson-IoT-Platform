@@ -62,4 +62,4 @@ The documentations on the manager and the mote can be accessed within both the U
 
 1. [Node-RED(QuickStart) のデータを dashDB に格納する](http://dotnsf.blog.jp/archives/1047589155.html)
 
-During the course of the project, only Japanese sources with detailed information regarding the topic of integration between Node-RED and DashDB were found. Although the descriptions are in Japanese, the user may wish to infer how the flows could be set up based on the screenshots (both Node-RED flows and JSON strings) provided in the sources.
+During the course of the project, only Japanese sources with detailed information regarding the integration between Node-RED and DashDB were found. Although the descriptions are in Japanese, the user may wish to infer how the flows could be configured based on the screenshots (both Node-RED flows and JSON strings) provided in the sources.
