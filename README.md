@@ -18,7 +18,8 @@ This guide consists of the following components:
 2. Gateway
     - Raspberry Pi
 3. Watson IoT Platform
-4. System Overview
+4. Hardware Design
+5. System Overview
 ```
 
 The [Basic Setup Guide](Basic-Setup-Guide/README.md) provides a guide with detailed steps to setup the Watson IoT Platform to receive device messages from local Node-RED flows, and it is recommended to be done prior to proceeding to other aspects.
