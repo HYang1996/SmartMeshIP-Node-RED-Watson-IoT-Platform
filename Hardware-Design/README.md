@@ -3,10 +3,10 @@ Table of Contents
 1. [Introduction](#introduction)
 1. [Design Considerations](#design-considerations)
 1. [Circuit Design](#circuit-design)
-  1. [Sensors](#sensors)
-    1. [PIR Motion Sensor](#pir-motion-sensor)
-  1. [Power Supply](#power-supply)
-  1. [Power Consumption](#power-consumption)
+    1. [Sensors](#sensors)
+        1. [PIR Motion Sensor](#pir-motion-sensor)
+    1. [Power Supply](#power-supply)
+    1. [Power Consumption](#power-consumption)
 1. [3D Printed Enclosure](#3d-printed-enclosure)
 1. [Deployment Strategy](#deployment-strategy)
 1. [Bill of Materials](#bill-of-materials)
@@ -51,4 +51,5 @@ Multiple PIR sensors were tested, and the [adafruit PIR Motion Sensor](https://l
 
 | Name of Sensor | Price (in GBP) | Supplier with Link |
 |:--------------:|:--------------:|:--------:|
-|Adafruit PIR Motion Sensor|7.58|[Digi-Key UK](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview)|
+|Adafruit PIR Motion Sensor|7.58|[Digi-Key UK](https://www.digikey.co.uk/product-detail/en/adafruit-industries-llc/189/1528-1991-ND/6827035?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping_Sensors%2C%20Transducers&utm_term=&productid=6827035&gclid=EAIaIQobChMI1aLBk6755gIVF-DtCh1vDgU4EAQYASABEgKHLvD_BwE)|
+| |9.00|[The Pi Hut](https://thepihut.com/products/adafruit-pir-motion-sensor?variant=27739667793&currency=GBP&gclid=EAIaIQobChMI1aLBk6755gIVF-DtCh1vDgU4EAQYAiABEgKbLvD_BwE)|
