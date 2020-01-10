@@ -4,6 +4,7 @@ Table of Contents
 1. [Design Considerations](#design-considerations)
 1. [Circuit Design](#circuit-design)
   1. [Sensors](#sensors)
+    1. [PIR Motion Sensor](#pir-motion-sensor)
   1. [Power Supply](#power-supply)
   1. [Power Consumption](#power-consumption)
 1. [3D Printed Enclosure](#3d-printed-enclosure)
@@ -22,12 +23,21 @@ The first design consideration of the testbed is its portability. In order to re
 
 As such, the printed circuit board (PCB) which hosts the sensors and circuits would be stacked on top of the mote using the nylon standoffs. The PCB would also have a smaller footprint than the mote, and therefore not increasing the dimension of the footprint. Moreover, the motes would be powered by individual power supplies and therefore not having cable or extensions to the wall, allowing them to be deployed in the room with maximum flexibility.
 
-The second design consideration is the low requirement and ease on repair and maintenance. To reduce frequency of maintenance, 
+The second design consideration is the low requirement and ease on repair and maintenance. To reduce frequency of maintenance, particularly the need of recharging the power supply, the power consumption of the system should be as low as possible. This objective led to choices of sensors with extremely low power consumption, and sometimes with a trade-off of its performance.
 
+The last consideration of the testbed is its robustness in deployment. Since the testbeds would be deployed with little supervision and maintenance, they should not be easily susceptible to malfunction and physical damages. In order to achieve this objective, a more finished and solid PCB with soldered components, compared to the prototype breadboard design would be fabricated, and each individual testbed, including the mote, the PCB and the power supply, would be kept in a 3D printed enclosure to protect it from external factors as much as possible.
 
 # Circuit Design #
 
 ## Sensors ##
+
+### PIR Motion Sensor ###
+
+The PIR motion sensor is used to detect motion, usually due to human activities, using infrared.
+
+Multiple PIR sensors were tested, and the [adafruit PIR Motion Sensor](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview) was chosen due to its low power consumption as well as the availability of range and delay time adjustment on the sensor.
+
+
 
 ## Power Supply ##
 
@@ -38,3 +48,7 @@ The second design consideration is the low requirement and ease on repair and ma
 # Deployment Strategy #
 
 # Bill of Materials #
+
+| Name of Sensor | Price (in GBP) | Supplier with Link |
+|:--------------:|:--------------:|:--------:|
+|Adafruit PIR Motion Sensor|7.58|[Digi-Key UK](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview)|
