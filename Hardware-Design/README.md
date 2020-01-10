@@ -18,6 +18,13 @@ The following sections would provide a detailed explanation of the hardware desi
 
 # Design Considerations #
 
+The first design consideration of the testbed is its portability. In order to retrofit a testbed into an existing room, it should be as non-intrusive as possible. Therefore, the testbed should have a relatively small form factor and would not interfere normal functions of, or activities carried out in the room.
+
+As such, the printed circuit board (PCB) which hosts the sensors and circuits would be stacked on top of the mote using the nylon standoffs. The PCB would also have a smaller footprint than the mote, and therefore not increasing the dimension of the footprint. Moreover, the motes would be powered by individual power supplies and therefore not having cable or extensions to the wall, allowing them to be deployed in the room with maximum flexibility.
+
+The second design consideration is the low requirement and ease on repair and maintenance. To reduce frequency of maintenance, 
+
+
 # Circuit Design #
 
 ## Sensors ##
