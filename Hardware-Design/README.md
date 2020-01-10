@@ -6,6 +6,8 @@ Table of Contents
     1. [Sensors](#sensors)
         1. [PIR Motion Sensor](#pir-motion-sensor)
         1. [Light Intensity Sensor](#light-intensity-sensor)
+        1. [Humidity Sensor](#humidity-sensor)
+        1. [Audio Sensor](#audio-sensor)
     1. [Power Supply](#power-supply)
     1. [Power Consumption](#power-consumption)
 1. [3D Printed Enclosure](#3d-printed-enclosure)
@@ -38,13 +40,31 @@ Since the mote could only support analog and digital inputs, digital and analog 
 
 The PIR motion sensor is used to detect motion, usually due to human activities, using infrared.
 
-Multiple PIR sensors were tested, and the [adafruit PIR Motion Sensor](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview) was chosen due to its low power consumption as well as the availability of range and delay time adjustment on the sensor.
+Multiple PIR sensors were tested, and the **adafruit PIR Motion Sensor** was chosen due to its low power consumption as well as the availability of range and delay time adjustment on the sensor.
 
 The sensor has an input voltage range of 5 V - 12 V and outputs a digital signal of 3.3 V.
 
 When deployed, the sensor should face the direction in which human activities are predicted to happen (the sensor itself has a 120 degree detecting angle), and should not face high intensity infrared sources such as sunlight.
 
 ### Light Intensity Sensor ###
+
+The light intensity sensor is used to measure the light condition in the room, in order to measure the amount of daylight in the room throughout the day. It could also be used to detect a sudden increase in surrounding light, indicating light sources being manually switched on. One of the potential applications of this sensor in a more intelligent system would be to automatically switch on/off, and adjust the intensity of lighting in the room based on the natural lighting intensity, thus saving energy consumption in the building.
+
+The **adafruit Light Sensor Breakout** was chosen due to its low power consumption and ability to output a range of analog voltages based on the input light intensity (higher output voltage with increasing input light intensity). The sensor accepts an input voltage range from 2.5 V to 5.5 V. An additional resistor was connected at the output when a 3.3 V input voltage was supplied to ensure that the maximum output voltage was kept under 1.7 V by shining mobile phone flash light directly at the sensor.
+
+When deployed, the sensor should face the direction in which monitored light sources or lighting conditions are located. Possible choices be windows and working locations in the room.
+
+### Humidity Sensor ###
+
+The relative humidity sensor is used to measure the relative humidity of the indoor environment. Relative humidity, together with temperature, are important factors influencing the comfort level experienced by the people in the room. One potential application of this sensor could be to monitor the indoor relative humidity and intelligently adjust the settings of the air conditioner such that a conducive indoor environment is maintained and optimised for working.
+
+The **TruSens Humidity Sensor** was chosen for the application due to its low power consumption. The sensor measures a range of relative humidity from 20% to 90%. The sensor is essentially a variable impedance whose resistance would change according to the temperature and humidity of the environment it is located in.
+
+When deployed, the sensor should be kept away from sources with much lower or higher relative humidity compared to the rest of the room. Possible sources with abnormal relative humidity levels could be air conditioner output, heater/radiator and opened windows.
+
+### Audio Sensor ###
+
+The audio sensor is used to measure the audio level or detect the change in such level in the indoor environment.
 
 ## Power Supply ##
 
@@ -56,9 +76,13 @@ When deployed, the sensor should face the direction in which human activities ar
 
 # Bill of Materials #
 
-| Name of Sensor | Price (in GBP) | Supplier with Link |
-|:--------------:|:--------------:|:--------:|
-|Adafruit PIR Motion Sensor|7.58|[Digi-Key UK](https://www.digikey.co.uk/product-detail/en/adafruit-industries-llc/189/1528-1991-ND/6827035?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping_Sensors%2C%20Transducers&utm_term=&productid=6827035&gclid=EAIaIQobChMI1aLBk6755gIVF-DtCh1vDgU4EAQYASABEgKHLvD_BwE)|
-| |9.00|[The Pi Hut](https://thepihut.com/products/adafruit-pir-motion-sensor?variant=27739667793&currency=GBP&gclid=EAIaIQobChMI1aLBk6755gIVF-DtCh1vDgU4EAQYAiABEgKbLvD_BwE)|
-|Adafruit Analog Sensor|2.52|[Rapid Electronics](https://www.rapidonline.com/Catalogue/Search?Query=als%20pt19)|
-| |2.50|[The Pi Hut](https://thepihut.com/products/adafruit-als-pt19-analog-light-sensor-breakout)|
+| Name of Sensor | Product Number | Price (in GBP) | Supplier with Link | Datasheet |
+|:--------------:|:--------------:|:--------------:|:------------------:|:---------:|
+|Adafruit PIR Motion Sensor|-|7.58|[Digi-Key UK](https://www.digikey.co.uk/product-detail/en/adafruit-industries-llc/189/1528-1991-ND/6827035?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping_Sensors%2C%20Transducers&utm_term=&productid=6827035&gclid=EAIaIQobChMI1aLBk6755gIVF-DtCh1vDgU4EAQYASABEgKHLvD_BwE)|[Available](https://cdn-learn.adafruit.com/downloads/pdf/pir-passive-infrared-proximity-motion-sensor.pdf?timestamp=1578657735)
+| | |9.00|[The Pi Hut](https://thepihut.com/products/adafruit-pir-motion-sensor?variant=27739667793&currency=GBP&gclid=EAIaIQobChMI1aLBk6755gIVF-DtCh1vDgU4EAQYAiABEgKbLvD_BwE)|
+|Adafruit Analog Sensor|ALS-PT19|2.52|[Rapid Electronics](https://www.rapidonline.com/Catalogue/Search?Query=als%20pt19)|[Available](https://static.rapidonline.com/pdf/73-5282_v1.pdf)
+| | |2.50|[The Pi Hut](https://thepihut.com/products/adafruit-als-pt19-analog-light-sensor-breakout)| |
+|TruSens Humidity Sensor|HCZ-J3A|0.856|[Rapid Electronics](https://www.rapidonline.com/trusens-hcz-j3a-humidity-sensor-61-0984)|[Available](https://static.rapidonline.com/pdf/61-0984.pdf)
+
+
+*Prices were quoted at the time of the documentation for reference purposes only
