@@ -64,7 +64,11 @@ When deployed, the sensor should be kept away from sources with much lower or hi
 
 ### Audio Sensor ###
 
-The audio sensor is used to measure the audio level or detect the change in such level in the indoor environment.
+The audio sensor is used to measure the audio level or detect the change in such level in the indoor environment. Audio level could be another metric that indicates the amount of human activities in the room. The audio sensor could be used together with the PIR sensor in order to provide a better data collection of the activities in the room.
+
+The **Velleman Microphone Sound Sensor Module** was chosen for the project due to its dual output options (both digital and analog). The analog option is able to output an analog voltage level based on the sound level detected, and the digital option is able to output a digital voltage signal based on the threshold level set on the sensor through a variable resistor.
+
+When deployed, the sensor should be position to face the direction of potential sound sources. It should not be located close to sources of high level noise, such as the windows and the door.
 
 ## Power Supply ##
 
@@ -83,6 +87,7 @@ The audio sensor is used to measure the audio level or detect the change in such
 |Adafruit Analog Sensor|ALS-PT19|2.52|[Rapid Electronics](https://www.rapidonline.com/Catalogue/Search?Query=als%20pt19)|[Available](https://static.rapidonline.com/pdf/73-5282_v1.pdf)
 | | |2.50|[The Pi Hut](https://thepihut.com/products/adafruit-als-pt19-analog-light-sensor-breakout)| |
 |TruSens Humidity Sensor|HCZ-J3A|0.856|[Rapid Electronics](https://www.rapidonline.com/trusens-hcz-j3a-humidity-sensor-61-0984)|[Available](https://static.rapidonline.com/pdf/61-0984.pdf)
-
+|Velleman Microphone Sound Sensor Module|VM309|4.32|[CPC](https://cpc.farnell.com/velleman-kit/vma309/sound-sensor-module-for-arduino/dp/SC14406)|[Available](https://www.velleman.eu/downloads/29/vma309_a4v02.pdf)|
+| | |4.13|[Velleman](http://www.velleman.co.uk/contents/en-uk/p920_Velleman_Arduino%E2%84%A2_Microphone_Sound_Sensor_Module.html)
 
 *Prices were quoted at the time of the documentation for reference purposes only
