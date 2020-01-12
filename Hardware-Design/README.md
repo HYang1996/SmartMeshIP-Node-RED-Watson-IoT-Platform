@@ -100,5 +100,8 @@ Since majority of the sensors require a supply voltage larger or equal to 3.3 V,
 |Velleman Microphone Sound Sensor Module|VM309|4.32|[CPC](https://cpc.farnell.com/velleman-kit/vma309/sound-sensor-module-for-arduino/dp/SC14406)|[Available](https://www.velleman.eu/downloads/29/vma309_a4v02.pdf)|
 | | |4.13|[Velleman](http://www.velleman.co.uk/contents/en-uk/p920_Velleman_Arduino%E2%84%A2_Microphone_Sound_Sensor_Module.html)|
 |Adafruit Vibration Sensor Switch|Fast, Medium & Slow|1.00|The Pi Hut ([Fast](https://thepihut.com/products/adafruit-fast-vibration-sensor-switch-easy-to-trigger)/[Medium](https://thepihut.com/products/adafruit-medium-vibration-sensor-switch)/[Slow](https://thepihut.com/products/adafruit-slow-vibration-sensor-switch-hard-to-trigger))|Not Available, but some details available on adafruit webpages ([Fast](https://www.adafruit.com/product/1766), [Medium](https://www.adafruit.com/product/2384) & [Slow](https://www.adafruit.com/product/1767))
+| | | | | |
+|**Name of Component**|**Product Number**|**Price (in GBP)**|**Supplier with Link**|**Datasheet**|
+
 
 *Prices were quoted at the time of the documentation for reference purposes only
