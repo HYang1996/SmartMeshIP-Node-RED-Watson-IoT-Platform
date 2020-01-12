@@ -70,6 +70,14 @@ The **Velleman Microphone Sound Sensor Module** was chosen for the project due t
 
 When deployed, the sensor should be position to face the direction of potential sound sources. It should not be located close to sources of high level noise, such as the windows and the door.
 
+### Vibration Sensor ###
+
+The vibration sensor is used to detect any vibration or movement created by human activities, such as opening and closing the doors. Its simple working principle, acting as a switch triggered by vibration, has made it ideal for the project as a digital sensor.
+
+The **adafruit Vibration Sensor Switch** was chosen for the project due to its low cost and small form factor. There are three types of sensors available, namely the slow, medium and fast versions. The varying stiffness of the spring within the sensor structure determines how easily the sensor could be triggered, and the fast/medium versions were deemed as suitable for the project as the slow version was too difficult to be activated during experiments.
+
+When deployed, the mote equipped with the vibration sensor would be installed on the door in order to detect people entering or leaving the room. This sensor would provide a more holistic picture of the human activities in the room on top of other sensors, such as potentially recording data with starting and ending time of the activities, hence simplifying data analysis processes.
+
 ## Power Supply ##
 
 ## Power Consumption ##
@@ -88,6 +96,7 @@ When deployed, the sensor should be position to face the direction of potential 
 | | |2.50|[The Pi Hut](https://thepihut.com/products/adafruit-als-pt19-analog-light-sensor-breakout)| |
 |TruSens Humidity Sensor|HCZ-J3A|0.856|[Rapid Electronics](https://www.rapidonline.com/trusens-hcz-j3a-humidity-sensor-61-0984)|[Available](https://static.rapidonline.com/pdf/61-0984.pdf)
 |Velleman Microphone Sound Sensor Module|VM309|4.32|[CPC](https://cpc.farnell.com/velleman-kit/vma309/sound-sensor-module-for-arduino/dp/SC14406)|[Available](https://www.velleman.eu/downloads/29/vma309_a4v02.pdf)|
-| | |4.13|[Velleman](http://www.velleman.co.uk/contents/en-uk/p920_Velleman_Arduino%E2%84%A2_Microphone_Sound_Sensor_Module.html)
+| | |4.13|[Velleman](http://www.velleman.co.uk/contents/en-uk/p920_Velleman_Arduino%E2%84%A2_Microphone_Sound_Sensor_Module.html)|
+|Adafruit Vibration Sensor Switch|Fast, Medium & Slow|1.00|The Pi Hut ([Fast](https://thepihut.com/products/adafruit-fast-vibration-sensor-switch-easy-to-trigger)/[Medium](https://thepihut.com/products/adafruit-medium-vibration-sensor-switch)/[Slow](https://thepihut.com/products/adafruit-slow-vibration-sensor-switch-hard-to-trigger))|Not Available, but some details available on adafruit webpages ([Fast](https://www.adafruit.com/product/1766), [Medium](https://www.adafruit.com/product/2384) & [Slow](https://www.adafruit.com/product/1767))
 
 *Prices were quoted at the time of the documentation for reference purposes only
