@@ -103,6 +103,8 @@ The PCB of the circuit was designed with the DipTrace software to facilitate its
 
 Iterations of the PCB designs are included in the [Schematics folder](Schematics/README.md). Since a rapid prototype which is easy to fabricate was required, through-hole design was implemented so that the components and pins could be soldered on with ease. Soldered PCBs may be referred to while soldering new boards since the pins were not labelled on the PCB design files.
 
+To connect the PCB pins to the mote's analog pins, terminal blocks were soldered onto mote. The detailed information of the terminal blocks can be found in the [Bill of Materials](#bill-of-materials) section.
+
 # 3D Printed Enclosure #
 
 # Deployment Strategy #
@@ -121,6 +123,8 @@ Iterations of the PCB designs are included in the [Schematics folder](Schematics
 |Adafruit Vibration Sensor Switch|Fast, Medium & Slow|1.00|The Pi Hut ([Fast](https://thepihut.com/products/adafruit-fast-vibration-sensor-switch-easy-to-trigger)/[Medium](https://thepihut.com/products/adafruit-medium-vibration-sensor-switch)/[Slow](https://thepihut.com/products/adafruit-slow-vibration-sensor-switch-hard-to-trigger))|Not Available, but some details available on adafruit webpages ([Fast](https://www.adafruit.com/product/1766), [Medium](https://www.adafruit.com/product/2384) & [Slow](https://www.adafruit.com/product/1767))
 | | | | | |
 |**Name of Component**|**Product Number**|**Price (in GBP)**|**Supplier with Link**|**Datasheet**|
+|Wire-to-Board Terminal Block, 3.5 mm, 2 Ways, 24 AWG, 18 AWG, Screw|CTBP3051/2|0.295|[Farnell](https://uk.farnell.com/camdenboss/ctbp3051-2/tb-wire-to-board-2pos-24-18awg/dp/2527545)|[Available](http://www.farnell.com/datasheets/2866690.pdf?_ga=2.252054154.2068100190.1578778119-1887109346.1578778119)|
+|3.3 V Fixed LDO Voltage Regulator|MCP1702-3302E/TO|0.408|[Farnell](https://uk.farnell.com/microchip/mcp1702-3302e-to/ic-v-reg-ldo-250ma-to-92-3/dp/1331485?scope=partnumberlookahead&ost=MCP1702-3302E%2FTO&searchref=searchlookahead&exaMfpn=true&ddkey=https%3Aen-GB%2FElement14_United_Kingdom%2Fw%2Fsearch)|[Available](https://4donline.ihs.com/images/VipMasterIC/IC/MCHP/MCHPS03366/MCHPS03366-1.pdf?hkey=52A5661711E402568146F3353EA87419)
 
 
 *Prices were quoted at the time of the documentation for reference purposes only
