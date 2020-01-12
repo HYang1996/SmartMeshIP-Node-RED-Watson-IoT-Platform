@@ -80,6 +80,8 @@ When deployed, the mote equipped with the vibration sensor would be installed on
 
 ## Power Supply ##
 
+Since majority of the sensors require a supply voltage larger or equal to 3.3 V, and the analog sensors require a constant voltage supply in order to provide sensible and reliable outputs, 3.3 V was chosen as the main supply voltage for the sensors.
+
 ## Power Consumption ##
 
 # 3D Printed Enclosure #
