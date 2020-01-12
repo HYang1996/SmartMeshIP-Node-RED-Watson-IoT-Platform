@@ -10,6 +10,7 @@ Table of Contents
         1. [Audio Sensor](#audio-sensor)
     1. [Power Supply](#power-supply)
     1. [Power Consumption](#power-consumption)
+    1. [PCB Design](#pcb-design)
 1. [3D Printed Enclosure](#3d-printed-enclosure)
 1. [Deployment Strategy](#deployment-strategy)
 1. [Bill of Materials](#bill-of-materials)
@@ -95,6 +96,12 @@ Since majority of the sensors require a supply voltage larger or equal to 3.3 V,
 As such, a battery pack consisting of 3 AA batteries at approximately 4.8 V was used as the power supply. The voltage directly supplies the PIR Motion Sensor, and other sensors are supplied via a 3.3 V linear voltage regulator.
 
 ## Power Consumption ##
+
+## PCB Design ##
+
+The PCB of the circuit was designed with the DipTrace software to facilitate its fabrication at the Roberts Building 6th Floor Teaching Lab.
+
+Iterations of the PCB designs are included in the [Schematics folder](Schematics/README.md). Since a rapid prototype which is easy to fabricate was required, through-hole design was implemented so that the components and pins could be soldered on with ease. Soldered PCBs may be referred to while soldering new boards since the pins were not labelled on the PCB design files.
 
 # 3D Printed Enclosure #
 
