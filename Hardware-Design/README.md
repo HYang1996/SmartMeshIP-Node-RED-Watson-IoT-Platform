@@ -109,7 +109,7 @@ To connect the PCB pins to the mote's analog pins, terminal blocks were soldered
 
 A prototype 3D printed enclosure for the mote, PCB and the battery pack was designed using the Autodesk Fusion 360 software. The .stl design files were exported and printed at the 6th Floor Teaching Lab. To facilitate printing, the design was separated into three parts consisting of the base and two parts which could be glued together to form the lid.
 
-The 3D design, as well as the .stl files used for printing can be accessed in the [3D-Design](3D-Deisng/README.md) folder.
+The 3D design, as well as the .stl files used for printing can be accessed in the [3D-Design](3D-Design/README.md) folder.
 
 # Deployment Strategy #
 
