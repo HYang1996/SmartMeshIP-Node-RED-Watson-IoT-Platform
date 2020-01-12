@@ -54,6 +54,8 @@ The light intensity sensor is used to measure the light condition in the room, i
 
 The **adafruit Light Sensor Breakout** was chosen due to its low power consumption and ability to output a range of analog voltages based on the input light intensity (higher output voltage with increasing input light intensity). The sensor accepts an input voltage range from 2.5 V to 5.5 V. An additional resistor was connected at the output when a 3.3 V input voltage was supplied to ensure that the maximum output voltage was kept under 1.7 V by shining mobile phone flash light directly at the sensor.
 
+<img src="images/light-sensor.jpg" width="400">
+
 When deployed, the sensor should face the direction in which monitored light sources or lighting conditions are located. Possible choices be windows and working locations in the room.
 
 ### Humidity Sensor ###
@@ -61,6 +63,8 @@ When deployed, the sensor should face the direction in which monitored light sou
 The relative humidity sensor is used to measure the relative humidity of the indoor environment. Relative humidity, together with temperature, are important factors influencing the comfort level experienced by the people in the room. One potential application of this sensor could be to monitor the indoor relative humidity and intelligently adjust the settings of the air conditioner such that a conducive indoor environment is maintained and optimised for working.
 
 The **TruSens Humidity Sensor** was chosen for the application due to its low power consumption. The sensor measures a range of relative humidity from 20% to 90%. The sensor is essentially a variable impedance whose resistance would change according to the temperature and humidity of the environment it is located in.
+
+<img src="images/rh-sensor.jpg" width="400">
 
 When deployed, the sensor should be kept away from sources with much lower or higher relative humidity compared to the rest of the room. Possible sources with abnormal relative humidity levels could be air conditioner output, heater/radiator and opened windows.
 
@@ -70,6 +74,8 @@ The audio sensor is used to measure the audio level or detect the change in such
 
 The **Velleman Microphone Sound Sensor Module** was chosen for the project due to its dual output options (both digital and analog). The analog option is able to output an analog voltage level based on the sound level detected, and the digital option is able to output a digital voltage signal based on the threshold level set on the sensor through a variable resistor.
 
+<img src="images/audio-sensor.jpg" width="400">
+
 When deployed, the sensor should be position to face the direction of potential sound sources. It should not be located close to sources of high level noise, such as the windows and the door.
 
 ### Vibration Sensor ###
@@ -77,6 +83,8 @@ When deployed, the sensor should be position to face the direction of potential 
 The vibration sensor is used to detect any vibration or movement created by human activities, such as opening and closing the doors. Its simple working principle, acting as a switch triggered by vibration, has made it ideal for the project as a digital sensor.
 
 The **adafruit Vibration Sensor Switch** was chosen for the project due to its low cost and small form factor. There are three types of sensors available, namely the slow, medium and fast versions. The varying stiffness of the spring within the sensor structure determines how easily the sensor could be triggered, and the fast/medium versions were deemed as suitable for the project as the slow version was too difficult to be activated during experiments.
+
+<img src="images/vibration-sensor.jpg" width="400">
 
 When deployed, the mote equipped with the vibration sensor would be installed on the door in order to detect people entering or leaving the room. This sensor would provide a more holistic picture of the human activities in the room on top of other sensors, such as potentially recording data with starting and ending time of the activities, hence simplifying data analysis processes.
 
