@@ -42,6 +42,8 @@ The PIR motion sensor is used to detect motion, usually due to human activities,
 
 Multiple PIR sensors were tested, and the **adafruit PIR Motion Sensor** was chosen due to its low power consumption as well as the availability of range and delay time adjustment on the sensor.
 
+<img src="images/pir-sensor.jpg" width="400">
+
 The sensor has an input voltage range of 5 V - 12 V and outputs a digital signal of 3.3 V.
 
 When deployed, the sensor should face the direction in which human activities are predicted to happen (the sensor itself has a 120 degree detecting angle), and should not face high intensity infrared sources such as sunlight.
@@ -81,6 +83,8 @@ When deployed, the mote equipped with the vibration sensor would be installed on
 ## Power Supply ##
 
 Since majority of the sensors require a supply voltage larger or equal to 3.3 V, and the analog sensors require a constant voltage supply in order to provide sensible and reliable outputs, 3.3 V was chosen as the main supply voltage for the sensors.
+
+As such, a battery pack consisting of 3 AA batteries at approximately 4.8 V was used as the power supply. The voltage directly supplies the PIR Motion Sensor, and other sensors are supplied via a 3.3 V linear voltage regulator.
 
 ## Power Consumption ##
 
