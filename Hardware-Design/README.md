@@ -97,6 +97,12 @@ As such, a battery pack consisting of 3 AA batteries at approximately 4.8 V was 
 
 ## Power Consumption ##
 
+Initially, the UA78M33 linear voltage regulator was used to supply the circuit with a constant 3.3 V voltage. However, it was observed that the working current was close to 3 mA with majority of the current drawn by the regulator. Under such condition, the battery pack with typical AA alkaline batteries (2500 mAh) would last for approximately one month before it runs out.
+
+Therefore, a **Low Quiescent Current LDO Regulator**, with a typical 2.0 uA quiescent current and 250 mA maximum output current, was used to replace the original regulator. This modification significantly improved the power consumption performance of the system and it was estimated to last for over a year without any battery replacement.
+
+The audio sensor was chosen to be implemented at later stage of the project. The sensor draws approximately 2 mA during idling, which consumes a large amount of power compared to the rest of the circuit. However, the sensor was still kept to be part of the design as it could provide extra useful data. To alleviate its undesirable power consumption performance as much as possible, it was designed that the sensor would be switched on periodically at a very low frequency by a transistor using one of the digital output on the mote. For instance, turning it on for 10 s every hour would bring the average current drawn down to 5.6 uA, 10/3600 of the original amount.
+
 ## PCB Design ##
 
 The PCB of the circuit was designed with the DipTrace software to facilitate its fabrication at the Roberts Building 6th Floor Teaching Lab.
