@@ -28,6 +28,8 @@ The [Gateway](Gateway/README.md) section showcases how Node-RED flows are implem
 
 The [Watson IoT Platform](Watson-IoT-Platform/README.md) section explains the functionality of the Node-RED flows that are hosted on the Watson IoT Platform, including the online dashboard as well as the SQL database to store the data collected.
 
+The [Hardware Design](Hardware-Design/README.md) section details the design strategies of the sensor circuit board, hardware form factor and the deployment considerations of the testbed created.
+
 Finally, the [System Overview](System-Overview/README.md) section provides an explanation on the overall structure of the project completed, as well as on the software and hardware features of the system.
 
 # Getting to Know the Basics #
